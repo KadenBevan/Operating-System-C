@@ -120,7 +120,17 @@ Process *get_next_process(Process *process_list, Config* config_data)
 	}
 	else if(strncmp(config_data->scheduleCode, "FCFS-P", 5) == 0)
 	{
-		
+		schedule_processes(process_list, config_data);
+		Process *process_itr = process_list;
+		while(process_itr->next != NULL)
+		{
+			if(process_itr->state == READY)
+			{
+				return process_itr;
+			}
+			process_itr = process_itr->next;
+		}
+		return NULL;
 	}
 	else if(strncmp(config_data->scheduleCode, "RR-P", 2) == 0)
 	{

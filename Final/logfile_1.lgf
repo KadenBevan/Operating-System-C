@@ -1,0 +1,738 @@
+Simulator Program
+=================
+
+Uploading Configuration Files
+
+Uploading Meta Data Files
+
+=================
+Begin Simulation
+
+Time:  0.000651, System Start
+Time:  0.001560, OS: Begin PCB Creation
+Time:  0.002309, OS: All processes now set in New state
+Time:  0.002366, OS: All processes now set in Ready state
+Time:  0.002400, OS: Process 3 selected with 3130 ms remaining
+Time:  0.002430, OS: Process 3 set in RUNNING state
+Time:  0.002451, OS: Process 3, MMU Allocation: 11/200/300 start
+Time:  0.002477, OS: Process 3, MMU Allocation: Successful
+Time:  0.002504, OS: Process: 3, printer output start
+Time:  0.802691, OS: Process: 3, printer output end
+Time:  0.802763, OS: Process: 3, monitor output start
+Time:  1.283044, OS: Process: 3, monitor output end
+Time:  1.283122, OS: Process: 3, printer output start
+Time:  1.883323, OS: Process: 3, printer output end
+Time:  1.883385, OS: Process 3, MMU Access: 11/300/200 start
+Time:  1.883415, OS: Process 3, MMU Access: Successful
+Time:  1.883437, OS: Process: 3, monitor output start
+Time:  2.163575, OS: Process: 3, monitor output end
+Time:  2.163658, OS: Process: 3, printer output start
+Time:  2.664035, OS: Process: 3, printer output end
+Time:  2.664378, OS: Process: 3, run operation start
+Time:  2.754613, OS: Process: 3, run operation end
+Time:  2.754686, OS: Process: 3, monitor output start
+Time:  2.955905, OS: Process: 3, monitor output end
+Time:  2.957315, OS: Process 3, MMU Access: 14/200/200 start
+Time:  2.958697, OS: Process 3, MMU Access: Successful
+Time:  2.959639, OS: Process: 3, run operation start
+Time:  3.041071, OS: Process: 3, run operation end
+Time:  3.042301, OS: Process: 3, run operation start
+Time:  3.149579, OS: Process: 3, run operation end
+Time:  3.150682, OS: Process 3 ended and set in EXIT state
+Time:  3.151668, OS: Process 4 selected with 4040 ms remaining
+Time:  3.153215, OS: Process 4 set in RUNNING state
+Time:  3.154487, OS: Process 4, MMU Allocation: 12/100/400 start
+Time:  3.155517, OS: Process 4, MMU Allocation: Successful
+Time:  3.156517, OS: Process: 4, run operation start
+Time:  3.269016, OS: Process: 4, run operation end
+Time:  3.269088, OS: Process 4, MMU Access: 12/200/400 start
+Time:  3.269120, OS: Process 4, MMU Access: Successful
+Time:  3.269149, OS: Process: 4, run operation start
+Time:  3.339712, OS: Process: 4, run operation end
+Time:  3.339770, OS: Process: 4, keyboard input start
+Time:  4.339908, OS: Process: 4, keyboard input end
+Time:  4.339966, OS: Process: 4, run operation start
+Time:  4.400163, OS: Process: 4, run operation end
+Time:  4.401638, OS: Process: 4, printer output start
+Time:  5.902887, OS: Process: 4, printer output end
+Time:  5.902945, OS: Process: 4, run operation start
+Time:  5.983044, OS: Process: 4, run operation end
+Time:  5.984331, OS: Process: 4, keyboard input start
+Time:  6.994160, OS: Process: 4, keyboard input end
+Time:  6.994255, OS: Process: 4, run operation start
+Time:  7.076972, OS: Process: 4, run operation end
+Time:  7.077130, OS: Process: 4, run operation start
+Time:  7.219962, OS: Process: 4, run operation end
+Time:  7.220115, OS: Process 4 ended and set in EXIT state
+Time:  7.220157, OS: Process 1 selected with 6380 ms remaining
+Time:  7.220184, OS: Process 1 set in RUNNING state
+Time:  7.220211, OS: Process 1, MMU Allocation: 5/200/300 start
+Time:  7.220238, OS: Process 1, MMU Allocation: Successful
+Time:  7.220264, OS: Process: 1, printer output start
+Time:  8.521158, OS: Process: 1, printer output end
+Time:  8.521236, OS: Process: 1, run operation start
+Time:  8.631599, OS: Process: 1, run operation end
+Time:  8.631895, OS: Process: 1, run operation start
+Time:  8.764906, OS: Process: 1, run operation end
+Time:  8.765300, OS: Process: 1, monitor output start
+Time:  9.285583, OS: Process: 1, monitor output end
+Time:  9.285852, OS: Process: 1, keyboard input start
+Time: 10.886099, OS: Process: 1, keyboard input end
+Time: 10.886255, OS: Process 1, MMU Access: 5/250/200 start
+Time: 10.886280, OS: Process 1, MMU Access: Successful
+Time: 10.886301, OS: Process: 1, run operation start
+Time: 10.936583, OS: Process: 1, run operation end
+Time: 10.937827, OS: Process: 1, run operation start
+Time: 11.009298, OS: Process: 1, run operation end
+Time: 11.009361, OS: Process: 1, keyboard input start
+Time: 13.609793, OS: Process: 1, keyboard input end
+Time: 13.609852, OS: Process 1 ended and set in EXIT state
+Time: 13.609876, OS: Process 0 selected with 6430 ms remaining
+Time: 13.609897, OS: Process 0 set in RUNNING state
+Time: 13.609918, OS: Process 0, MMU Allocation: 5/100/200 start
+Time: 13.609938, OS: Process 0, MMU Allocation: Successful
+Time: 13.609958, OS: Process: 0, printer output start
+Time: 15.115302, OS: Process: 0, printer output end
+Time: 15.120892, OS: Process: 0, run operation start
+Time: 15.182261, OS: Process: 0, run operation end
+Time: 15.182350, OS: Process: 0, run operation start
+Time: 15.283747, OS: Process: 0, run operation end
+Time: 15.283806, OS: Process: 0, printer output start
+Time: 15.784005, OS: Process: 0, printer output end
+Time: 15.784068, OS: Process: 0, run operation start
+Time: 15.914317, OS: Process: 0, run operation end
+Time: 15.914378, OS: Process: 0, printer output start
+Time: 17.014485, OS: Process: 0, printer output end
+Time: 17.015857, OS: Process 0, MMU Access: 5/150/100 start
+Time: 17.017108, OS: Process 0, MMU Access: Successful
+Time: 17.018451, OS: Process: 0, printer output start
+Time: 17.519621, OS: Process: 0, printer output end
+Time: 17.519867, OS: Process: 0, run operation start
+Time: 17.650953, OS: Process: 0, run operation end
+Time: 17.652093, OS: Process: 0, keyboard input start
+Time: 19.852396, OS: Process: 0, keyboard input end
+Time: 19.853585, OS: Process: 0, run operation start
+Time: 19.993863, OS: Process: 0, run operation end
+Time: 19.994142, OS: Process: 0, run operation start
+Time: 20.065029, OS: Process: 0, run operation end
+Time: 20.065309, OS: Process 0 ended and set in EXIT state
+Time: 20.067989, OS: Process 5 selected with 6750 ms remaining
+Time: 20.069318, OS: Process 5 set in RUNNING state
+Time: 20.070395, OS: Process 5, MMU Allocation: 11/100/500 start
+Time: 20.071469, OS: Process 5, MMU Allocation: Successful
+Time: 20.073093, OS: Process: 5, run operation start
+Time: 20.153363, OS: Process: 5, run operation end
+Time: 20.154905, OS: Process: 5, run operation start
+Time: 20.206341, OS: Process: 5, run operation end
+Time: 20.207949, OS: Process: 5, printer output start
+Time: 21.009478, OS: Process: 5, printer output end
+Time: 21.010882, OS: Process: 5, keyboard input start
+Time: 23.215025, OS: Process: 5, keyboard input end
+Time: 23.216525, OS: Process: 5, run operation start
+Time: 23.307690, OS: Process: 5, run operation end
+Time: 23.309051, OS: Process: 5, keyboard input start
+Time: 24.316077, OS: Process: 5, keyboard input end
+Time: 24.317744, OS: Process: 5, printer output start
+Time: 24.919314, OS: Process: 5, printer output end
+Time: 24.919376, OS: Process: 5, run operation start
+Time: 25.009528, OS: Process: 5, run operation end
+Time: 25.009598, OS: Process: 5, keyboard input start
+Time: 26.609862, OS: Process: 5, keyboard input end
+Time: 26.609921, OS: Process: 5, run operation start
+Time: 26.730056, OS: Process: 5, run operation end
+Time: 26.730129, OS: Process: 5, run operation start
+Time: 26.850294, OS: Process: 5, run operation end
+Time: 26.850374, OS: Process 5 ended and set in EXIT state
+Time: 26.850399, OS: Process 2 selected with 7560 ms remaining
+Time: 26.850419, OS: Process 2 set in RUNNING state
+Time: 26.850439, OS: Process 2, MMU Allocation: 11/200/300 start
+Time: 26.850460, OS: Process 2, MMU Allocation: Successful
+Time: 26.850480, OS: Process: 2, run operation start
+Time: 26.990797, OS: Process: 2, run operation end
+Time: 26.990855, OS: Process: 2, keyboard input start
+Time: 29.593838, OS: Process: 2, keyboard input end
+Time: 29.593903, OS: Process: 2, run operation start
+Time: 29.724301, OS: Process: 2, run operation end
+Time: 29.725274, OS: Process: 2, run operation start
+Time: 29.875531, OS: Process: 2, run operation end
+Time: 29.876829, OS: Process: 2, run operation start
+Time: 30.031001, OS: Process: 2, run operation end
+Time: 30.031941, OS: Process 2, MMU Allocation: 11/300/400 start
+Time: 30.032184, OS: Process 2, MMU Allocation: Successful
+Time: 30.032465, OS: Process: 2, monitor output start
+Time: 30.473462, OS: Process: 2, monitor output end
+Time: 30.474532, OS: Process: 2, keyboard input start
+Time: 31.675586, OS: Process: 2, keyboard input end
+Time: 31.675855, OS: Process: 2, run operation start
+Time: 31.806827, OS: Process: 2, run operation end
+Time: 31.807094, OS: Process: 2, printer output start
+Time: 32.907370, OS: Process: 2, printer output end
+Time: 32.908500, OS: Process: 2, monitor output start
+Time: 33.429788, OS: Process: 2, monitor output end
+Time: 33.431129, OS: Process: 2, keyboard input start
+Time: 34.432161, OS: Process: 2, keyboard input end
+Time: 34.433798, OS: Process 2 ended and set in EXIT state
+Time: 34.434869, OS: System stop
+
+End Simulation - Complete
+=================
+
+Simulator Program
+=================
+
+Uploading Configuration Files
+
+Uploading Meta Data Files
+
+=================
+Begin Simulation
+
+Time:  0.007231, System Start
+Time:  0.009233, OS: Begin PCB Creation
+Time:  0.010203, OS: All processes now set in New state
+Time:  0.010428, OS: All processes now set in Ready state
+Time:  0.010563, OS: Process 0 selected with 6430 ms remaining
+Time:  0.010662, OS: Process 0 set in RUNNING state
+Simulator Program
+=================
+
+Uploading Configuration Files
+
+Uploading Meta Data Files
+
+=================
+Begin Simulation
+
+Time:  0.006703, System Start
+Time:  0.006775, OS: Begin PCB Creation
+Time:  0.007596, OS: All processes now set in New state
+Time:  0.014406, OS: All processes now set in Ready state
+Time:  0.014493, OS: Process 0 selected with 6430 ms remaining
+Time: 13.658164, OS: Process 0 set in RUNNING state
+Simulator Program
+=================
+
+Uploading Configuration Files
+
+Uploading Meta Data Files
+
+=================
+Begin Simulation
+
+Time:  0.000324, System Start
+Time:  0.000348, OS: Begin PCB Creation
+Time:  0.005202, OS: All processes now set in New state
+Time:  0.005392, OS: All processes now set in Ready state
+Time:  0.005433, OS: Process 0 selected with 6430 ms remaining
+Time:  5.148488, OS: Process 0 set in RUNNING state
+Time: 25.517693, OS: Process: 0, printer output start
+Time: 35.864642, OS: Process: 0, set in BLOCKED state
+Time: 40.960339, OS: Process 1 selected with 6380 ms remaining
+Time: 43.769459, OS: Process 1 set in RUNNING state
+Time: 72.576690, OS: Process: 1, printer output start
+Time: 80.054755, OS: Process: 1, set in BLOCKED state
+Time: 82.519517, OS: Process 2 selected with 7560 ms remaining
+Simulator Program
+=================
+
+Uploading Configuration Files
+
+Uploading Meta Data Files
+
+=================
+Begin Simulation
+
+Time:  0.000298, System Start
+Time:  0.000323, OS: Begin PCB Creation
+Time:  0.001104, OS: All processes now set in New state
+Time:  0.001149, OS: All processes now set in Ready state
+Time:  0.001183, OS: Process 0 selected with 6430 ms remaining
+Time:  6.065821, OS: Process 0 set in RUNNING state
+Time: 37.239994, OS: Process: 0, printer output start
+Time: 46.054815, OS: Process: 0, set in BLOCKED state
+Time: 53.555016, OS: Process 1 selected with 6380 ms remaining
+Time: 60.602533, OS: Process 1 set in RUNNING state
+Time: 77.404890, OS: Process: 1, printer output start
+Simulator Program
+=================
+
+Uploading Configuration Files
+
+Uploading Meta Data Files
+
+=================
+Begin Simulation
+
+Time:  0.000258, System Start
+Time:  0.000280, OS: Begin PCB Creation
+Time:  0.002538, OS: All processes now set in New state
+Time:  0.003590, OS: All processes now set in Ready state
+Time:  0.004615, OS: Process 0 selected with 6430 ms remaining
+Time:  0.004716, OS: Process 0 set in RUNNING state
+Time:  0.004800, OS: Process: 0, printer output start
+Time:  1.505144, OS: Process: 0, set in BLOCKED state
+Time:  1.505841, OS: Process 1 selected with 6380 ms remaining
+Time:  1.506234, OS: Process 1 set in RUNNING state
+Time:  1.507032, OS: Process: 1, printer output start
+Time:  2.807508, OS: Process: 1, set in BLOCKED state
+Time:  2.807618, OS: Process 2 selected with 7560 ms remaining
+Time:  2.807666, OS: Process 2 set in RUNNING state
+Time:  2.807692, OS: Process: 2, run operation start
+
+Time:  2.810874, OS: Process: 2, keyboard input start
+
+Time:  5.411162, OS: Process: 2, set in BLOCKED state
+Time:  5.411252, OS: Process 3 selected with 3130 ms remaining
+Time:  5.411317, OS: Process 3 set in RUNNING state
+Time:  5.411350, OS: Process: 3, printer output start
+Time:  6.211481, OS: Process: 3, set in BLOCKED state
+Time:  6.211598, OS: Process 4 selected with 4040 ms remaining
+Time:  6.211742, OS: Process 4 set in RUNNING state
+Time:  6.211769, OS: Process: 4, run operation start
+Time:  6.214890, OS: Process: 4, run operation start
+
+Time:  6.218146, OS: Process: 4, keyboard input start
+
+Time:  7.218536, OS: Process: 4, set in BLOCKED state
+Time:  7.218669, OS: Process 5 selected with 6750 ms remaining
+Time:  7.218699, OS: Process 5 set in RUNNING state
+Time:  7.218722, OS: Process: 5, run operation start
+Time:  7.221813, OS: Process: 5, run operation start
+Time:  7.232339, OS: Process: 5, printer output start
+Time:  8.037771, OS: Process: 5, set in BLOCKED state
+
+Time:  8.037889, OS: Process: 5, keyboard input start
+
+Time: 10.240143, OS: Process: 5, set in BLOCKED state
+Time: 10.240233, OS: Process: 5, run operation start
+
+Time: 10.243421, OS: Process: 5, keyboard input start
+
+Time: 11.243783, OS: Process: 5, set in BLOCKED state
+Time: 11.243877, OS: Process: 5, printer output start
+Time: 11.846249, OS: Process: 5, set in BLOCKED state
+Time: 11.846341, OS: Process: 5, run operation start
+
+Time: 11.849629, OS: Process: 5, keyboard input start
+
+Time: 13.449994, OS: Process: 5, set in BLOCKED state
+Time: 13.450092, OS: Process: 5, run operation start
+Time: 13.455013, OS: Process: 5, run operation start
+Time: 13.459724, OS: Process: 4, run operation start
+Time: 13.466175, OS: Process: 4, printer output start
+Time: 14.966384, OS: Process: 4, set in BLOCKED state
+Time: 14.967372, OS: Process: 4, run operation start
+
+Time: 14.973211, OS: Process: 4, keyboard input start
+
+Time: 15.973522, OS: Process: 4, set in BLOCKED state
+Time: 15.975672, OS: Process: 4, run operation start
+Time: 15.980706, OS: Process: 4, run operation start
+Time: 15.985730, OS: Process: 3, monitor output start
+Time: 16.477023, OS: Process: 3, set in BLOCKED state
+Time: 16.486271, OS: Process: 3, printer output start
+Time: 17.087671, OS: Process: 3, set in BLOCKED state
+Time: 17.087765, OS: Process: 3, monitor output start
+Time: 17.367890, OS: Process: 3, set in BLOCKED state
+Time: 17.373046, OS: Process: 3, printer output start
+Time: 17.875005, OS: Process: 3, set in BLOCKED state
+Time: 17.875082, OS: Process: 3, run operation start
+Time: 17.881028, OS: Process: 3, monitor output start
+Time: 18.083875, OS: Process: 3, set in BLOCKED state
+Time: 18.083986, OS: Process: 3, run operation start
+Time: 18.089720, OS: Process: 3, run operation start
+Time: 18.096389, OS: Process: 2, run operation start
+Time: 18.101001, OS: Process: 2, run operation start
+Time: 18.105881, OS: Process: 2, run operation start
+Time: 18.111865, OS: Process: 2, monitor output start
+Time: 18.553811, OS: Process: 2, set in BLOCKED state
+
+Time: 18.553891, OS: Process: 2, keyboard input start
+
+Time: 19.754004, OS: Process: 2, set in BLOCKED state
+Time: 19.754472, OS: Process: 2, run operation start
+Time: 19.758493, OS: Process: 2, printer output start
+Time: 20.859891, OS: Process: 2, set in BLOCKED state
+Time: 20.862540, OS: Process: 2, monitor output start
+Time: 21.385065, OS: Process: 2, set in BLOCKED state
+
+Time: 21.386408, OS: Process: 2, keyboard input start
+
+Time: 22.388446, OS: Process: 2, set in BLOCKED state
+Time: 22.388595, OS: Process: 1, run operation start
+Time: 22.391736, OS: Process: 1, run operation start
+Time: 22.395046, OS: Process: 1, monitor output start
+Time: 22.915329, OS: Process: 1, set in BLOCKED state
+
+Time: 22.915423, OS: Process: 1, keyboard input start
+
+Time: 24.517461, OS: Process: 1, set in BLOCKED state
+Time: 24.517553, OS: Process: 1, run operation start
+Time: 24.522308, OS: Process: 1, run operation start
+
+Time: 24.527080, OS: Process: 1, keyboard input start
+
+Time: 27.127949, OS: Process: 1, set in BLOCKED state
+Time: 27.128812, OS: Process: 0, run operation start
+Time: 27.132985, OS: Process: 0, run operation start
+Time: 27.136889, OS: Process: 0, printer output start
+Time: 27.637870, OS: Process: 0, set in BLOCKED state
+Time: 27.638711, OS: Process: 0, run operation start
+Time: 27.642789, OS: Process: 0, printer output start
+Time: 28.743708, OS: Process: 0, set in BLOCKED state
+Time: 28.744589, OS: Process: 0, printer output start
+Time: 29.245831, OS: Process: 0, set in BLOCKED state
+Time: 29.245918, OS: Process: 0, run operation start
+
+Time: 29.249121, OS: Process: 0, keyboard input start
+
+Time: 31.449318, OS: Process: 0, set in BLOCKED state
+Time: 31.450025, OS: Process: 0, run operation start
+Time: 31.453934, OS: Process: 0, run operation start
+Time: 31.457583, OS: System stop
+
+End Simulation - Complete
+=================
+
+Simulator Program
+=================
+
+Uploading Configuration Files
+
+Uploading Meta Data Files
+
+=================
+Begin Simulation
+
+Time:  0.002041, System Start
+Time:  0.002293, OS: Begin PCB Creation
+Time:  0.003317, OS: All processes now set in New state
+Time:  0.003776, OS: All processes now set in Ready state
+Time:  0.004042, OS: Process 0 selected with 6430 ms remaining
+Time:  9.014788, OS: Process 0 set in RUNNING state
+
+Time: 19.281060, OS: Process: 0, printer output start
+
+Time: 29.499539, OS: Process: 0, set in BLOCKED state
+Time: 34.066845, OS: Process 1 selected with 6380 ms remaining
+Time: 36.998460, OS: Process 1 set in RUNNING state
+Simulator Program
+=================
+
+Uploading Configuration Files
+
+Uploading Meta Data Files
+
+=================
+Begin Simulation
+
+Time:  0.000236, System Start
+Time:  0.000258, OS: Begin PCB Creation
+Time:  0.000954, OS: All processes now set in New state
+Time:  0.000986, OS: All processes now set in Ready state
+Time:  0.001016, OS: Process 0 selected with 6430 ms remaining
+Time:  0.001044, OS: Process 0 set in RUNNING state
+
+Time:  0.001067, OS: Process: 0, printer output start
+
+Time:  1.501306, OS: Process: 0, set in BLOCKED state
+Time:  1.501421, OS: Process 1 selected with 6380 ms remaining
+Time:  1.501457, OS: Process 1 set in RUNNING state
+
+Time:  1.501489, OS: Process: 1, printer output start
+
+Time:  2.802209, OS: Process: 1, set in BLOCKED state
+Time:  2.804777, OS: Process 2 selected with 7560 ms remaining
+Time:  2.807190, OS: Process 2 set in RUNNING state
+Time:  2.809846, OS: Process: 2, run operation start
+Time:  2.835945, OS: Process: 2, run operation end
+Time:  2.845070, OS: Process 2 set in READY state
+
+Time:  2.847838, OS: Process: 2, keyboard input start
+
+Time:  5.450631, OS: Process: 2, set in BLOCKED state
+Time:  5.450730, OS: Process 3 selected with 3130 ms remaining
+Time:  5.450757, OS: Process 3 set in RUNNING state
+
+Time:  5.450782, OS: Process: 3, printer output start
+
+Time:  6.250944, OS: Process: 3, set in BLOCKED state
+Time:  6.253399, OS: Process 4 selected with 4040 ms remaining
+Time:  6.255336, OS: Process 4 set in RUNNING state
+Time:  6.257324, OS: Process: 4, run operation start
+Time:  6.271343, OS: Process: 4, run operation end
+Time:  6.272849, OS: Process 4 set in READY state
+Time:  6.274134, OS: Process: 4, run operation start
+Time:  6.284615, OS: Process: 4, run operation end
+Time:  6.286121, OS: Process 4 set in READY state
+
+Time:  6.287302, OS: Process: 4, keyboard input start
+
+Time:  7.288798, OS: Process: 4, set in BLOCKED state
+Time:  7.291079, OS: Process 5 selected with 6750 ms remaining
+Time:  7.292786, OS: Process 5 set in RUNNING state
+Time:  7.294162, OS: Process: 5, run operation start
+Time:  7.303267, OS: Process: 5, run operation end
+Time:  7.305011, OS: Process 5 set in READY state
+Time:  7.307098, OS: Process: 5, run operation start
+Time:  7.314630, OS: Process: 5, run operation end
+Time:  7.316062, OS: Process 5 set in READY state
+
+Time:  7.318284, OS: Process: 5, printer output start
+
+Time:  8.120135, OS: Process: 5, set in BLOCKED state
+
+Time:  8.120235, OS: Process: 5, keyboard input start
+
+Time: 10.320502, OS: Process: 5, set in BLOCKED state
+Time: 10.320613, OS: Process: 5, run operation start
+Time: 10.330208, OS: Process: 5, run operation end
+Time: 10.331975, OS: Process 5 set in READY state
+
+Time: 10.333772, OS: Process: 5, keyboard input start
+
+Time: 11.335709, OS: Process: 5, set in BLOCKED state
+
+Time: 11.335804, OS: Process: 5, printer output start
+
+Time: 11.936027, OS: Process: 5, set in BLOCKED state
+Time: 11.936140, OS: Process: 5, run operation start
+Time: 11.946237, OS: Process: 5, run operation end
+Time: 11.958811, OS: Process 5 set in READY state
+
+Time: 11.960533, OS: Process: 5, keyboard input start
+
+Time: 13.562756, OS: Process: 5, set in BLOCKED state
+Time: 13.562857, OS: Process: 5, run operation start
+Time: 13.583153, OS: Process: 5, run operation end
+Time: 13.584943, OS: Process 5 set in READY state
+Time: 13.586510, OS: Process: 5, run operation start
+Time: 13.607488, OS: Process: 5, run operation end
+Time: 13.609174, OS: Process 5 set in READY state
+Time: 13.610641, OS: Process 5 selected with 0 ms remaining
+Time: 13.612127, OS: Process 5 set in RUNNING state
+Time: 13.613515, OS: Process: 4, run operation start
+Time: 13.619674, OS: Process: 4, run operation end
+Time: 13.626834, OS: Process 4 set in READY state
+
+Time: 13.626983, OS: Process: 4, printer output start
+
+Time: 15.127351, OS: Process: 4, set in BLOCKED state
+Time: 15.127448, OS: Process: 4, run operation start
+Time: 15.136483, OS: Process: 4, run operation end
+Time: 15.137095, OS: Process 4 set in READY state
+
+Time: 15.137383, OS: Process: 4, keyboard input start
+
+Time: 16.139725, OS: Process: 4, set in BLOCKED state
+Time: 16.143925, OS: Process: 4, run operation start
+Time: 16.156662, OS: Process: 4, run operation end
+Time: 16.158559, OS: Process 4 set in READY state
+Time: 16.160094, OS: Process: 4, run operation start
+Time: 16.178145, OS: Process: 4, run operation end
+Time: 16.179769, OS: Process 4 set in READY state
+Time: 16.181318, OS: Process 4 selected with 0 ms remaining
+Time: 16.182734, OS: Process 4 set in RUNNING state
+
+Time: 16.184425, OS: Process: 3, monitor output start
+
+Time: 16.666612, OS: Process: 3, set in BLOCKED state
+
+Time: 16.666704, OS: Process: 3, printer output start
+
+Time: 17.266850, OS: Process: 3, set in BLOCKED state
+
+Time: 17.269397, OS: Process: 3, monitor output start
+
+Time: 17.551415, OS: Process: 3, set in BLOCKED state
+
+Time: 17.553239, OS: Process: 3, printer output start
+
+Time: 18.055089, OS: Process: 3, set in BLOCKED state
+Time: 18.055182, OS: Process: 3, run operation start
+Time: 18.065494, OS: Process: 3, run operation end
+Time: 18.069000, OS: Process 3 set in READY state
+
+Time: 18.070366, OS: Process: 3, monitor output start
+
+Time: 18.271870, OS: Process: 3, set in BLOCKED state
+Time: 18.274560, OS: Process: 3, run operation start
+Time: 18.288164, OS: Process: 3, run operation end
+Time: 18.289656, OS: Process 3 set in READY state
+Time: 18.290968, OS: Process: 3, run operation start
+Time: 18.308153, OS: Process: 3, run operation end
+Time: 18.309856, OS: Process 3 set in READY state
+Time: 18.311251, OS: Process 3 selected with 0 ms remaining
+Time: 18.312656, OS: Process 3 set in RUNNING state
+Time: 18.314678, OS: Process: 2, run operation start
+Time: 18.340223, OS: Process: 2, run operation end
+Time: 18.345494, OS: Process 2 set in READY state
+Time: 18.346884, OS: Process: 2, run operation start
+Time: 18.371088, OS: Process: 2, run operation end
+Time: 18.377809, OS: Process 2 set in READY state
+Time: 18.378713, OS: Process: 2, run operation start
+Time: 18.405860, OS: Process: 2, run operation end
+Time: 18.406157, OS: Process 2 set in READY state
+
+Time: 18.406370, OS: Process: 2, monitor output start
+
+Time: 18.846707, OS: Process: 2, set in BLOCKED state
+
+Time: 18.848429, OS: Process: 2, keyboard input start
+
+Time: 20.050350, OS: Process: 2, set in BLOCKED state
+Time: 20.050448, OS: Process: 2, run operation start
+Time: 20.077947, OS: Process: 2, run operation end
+Time: 20.079659, OS: Process 2 set in READY state
+
+Time: 20.081432, OS: Process: 2, printer output start
+
+Time: 21.183676, OS: Process: 2, set in BLOCKED state
+
+Time: 21.186187, OS: Process: 2, monitor output start
+
+Time: 21.708512, OS: Process: 2, set in BLOCKED state
+
+Time: 21.710648, OS: Process: 2, keyboard input start
+
+Time: 22.712782, OS: Process: 2, set in BLOCKED state
+Time: 22.714773, OS: Process: 1, run operation start
+Time: 22.729584, OS: Process: 1, run operation end
+Time: 22.731192, OS: Process 1 set in READY state
+Time: 22.732457, OS: Process: 1, run operation start
+Time: 22.748813, OS: Process: 1, run operation end
+Time: 22.750871, OS: Process 1 set in READY state
+
+Time: 22.752722, OS: Process: 1, monitor output start
+
+Time: 23.274866, OS: Process: 1, set in BLOCKED state
+
+Time: 23.274968, OS: Process: 1, keyboard input start
+
+Time: 24.876624, OS: Process: 1, set in BLOCKED state
+Time: 24.876704, OS: Process: 1, run operation start
+Time: 24.883092, OS: Process: 1, run operation end
+Time: 24.883168, OS: Process 1 set in READY state
+Time: 24.883211, OS: Process: 1, run operation start
+Time: 24.892251, OS: Process: 1, run operation end
+Time: 24.898088, OS: Process 1 set in READY state
+
+Time: 24.898183, OS: Process: 1, keyboard input start
+
+Time: 27.498289, OS: Process: 1, set in BLOCKED state
+Time: 27.499133, OS: Process: 0, run operation start
+Time: 27.505580, OS: Process: 0, run operation end
+Time: 27.506885, OS: Process 0 set in READY state
+Time: 27.507924, OS: Process: 0, run operation start
+Time: 27.523994, OS: Process: 0, run operation end
+Time: 27.524077, OS: Process 0 set in READY state
+
+Time: 27.524104, OS: Process: 0, printer output start
+
+Time: 28.031954, OS: Process: 0, set in BLOCKED state
+Time: 28.032045, OS: Process: 0, run operation start
+Time: 28.060019, OS: Process: 0, run operation end
+Time: 28.062004, OS: Process 0 set in READY state
+
+Time: 28.062069, OS: Process: 0, printer output start
+
+Time: 29.162175, OS: Process: 0, set in BLOCKED state
+
+Time: 29.162446, OS: Process: 0, printer output start
+
+Time: 29.662763, OS: Process: 0, set in BLOCKED state
+Time: 29.662865, OS: Process: 0, run operation start
+Time: 29.677949, OS: Process: 0, run operation end
+Time: 29.682379, OS: Process 0 set in READY state
+
+Time: 29.682569, OS: Process: 0, keyboard input start
+
+Time: 31.882884, OS: Process: 0, set in BLOCKED state
+Time: 31.883053, OS: Process: 0, run operation start
+Time: 31.898138, OS: Process: 0, run operation end
+Time: 31.898734, OS: Process 0 set in READY state
+Time: 31.899144, OS: Process: 0, run operation start
+Time: 31.908878, OS: Process: 0, run operation end
+Time: 31.909941, OS: Process 0 set in READY state
+Time: 31.910387, OS: Process 0 selected with 0 ms remaining
+Time: 31.911123, OS: Process 0 set in RUNNING state
+Time: 31.911505, OS: System stop
+
+End Simulation - Complete
+=================
+
+Simulator Program
+=================
+
+Uploading Configuration Files
+
+Uploading Meta Data Files
+
+=================
+Begin Simulation
+
+Time:  0.005548, System Start
+Time:  0.007559, OS: Begin PCB Creation
+Time:  0.009104, OS: All processes now set in New state
+Time:  0.011075, OS: All processes now set in Ready state
+Time:  0.011231, OS: Process 0 selected with 6430 ms remaining
+Time:  0.011340, OS: Process 0 set in RUNNING state
+
+Time:  0.011446, OS: Process: 0, printer output start
+
+Time:  1.512191, OS: Process: 0, set in BLOCKED state
+Time:  1.519804, OS: Process 1 selected with 6380 ms remaining
+Time:  1.520806, OS: Process 1 set in RUNNING state
+
+Time:  1.523672, OS: Process: 1, printer output start
+
+Time:  2.824083, OS: Process: 1, set in BLOCKED state
+Time:  2.826921, OS: Process 2 selected with 7560 ms remaining
+Time:  2.831954, OS: Process 2 set in RUNNING state
+Time:  2.832471, OS: Process: 2, run operation start
+Time:  2.848241, OS: Process: 2, run operation end
+Time:  2.852911, OS: Process 2 set in READY state
+
+Time:  2.853230, OS: Process: 2, keyboard input start
+
+Time:  5.456533, OS: Process: 2, set in BLOCKED state
+Time:  5.460301, OS: Process 3 selected with 3130 ms remaining
+Time:  5.466536, OS: Process 3 set in RUNNING state
+
+Time:  5.466703, OS: Process: 3, printer output start
+
+Time:  6.267169, OS: Process: 3, set in BLOCKED state
+Time:  6.270287, OS: Process 4 selected with 4040 ms remaining
+Time:  6.273969, OS: Process 4 set in RUNNING state
+Time:  6.276403, OS: Process: 4, run operation start
+Time:  6.296484, OS: Process: 4, run operation end
+Time:  6.297205, OS: Process 4 set in READY state
+Time:  6.297601, OS: Process: 4, run operation start
+Time:  6.314644, OS: Process: 4, run operation end
+Time:  6.330211, OS: Process 4 set in READY state
+
+Time:  6.330592, OS: Process: 4, keyboard input start
+
+Time:  7.331306, OS: Process: 4, set in BLOCKED state
+Time:  7.336789, OS: Process 5 selected with 6750 ms remaining
+Time:  7.340283, OS: Process 5 set in RUNNING state
+Time:  7.340484, OS: Process: 5, run operation start
+Time:  7.354275, OS: Process: 5, run operation end
+Time:  7.356928, OS: Process 5 set in READY state
+Time:  7.358861, OS: Process: 5, run operation start
+Time:  7.382282, OS: Process: 5, run operation end
+Time:  7.386435, OS: Process 5 set in READY state
+
+Time:  7.386721, OS: Process: 5, printer output start
+
+Time:  8.189939, OS: Process: 5, set in BLOCKED state
+
+Time:  8.193780, OS: Process: 5, keyboard input start
+
+Time: 10.398848, OS: Process: 5, set in BLOCKED state
+Time: 10.405078, OS: Process: 5, run operation start
+Time: 10.419411, OS: Process: 5, run operation end
+Time: 10.422400, OS: Process 5 set in READY state
+
+Time: 10.425430, OS: Process: 5, keyboard input start
+

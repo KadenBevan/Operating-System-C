@@ -13,8 +13,9 @@
 #include "MMU.h"
 
 int run_process(Process *process, Config *config_data);
-int run_process_p(Process *process, Config *config_data);
+int run_process_p(Process *process, Process *process_list, Config *config_data);
 int start(Process *process, Config *config_data);
+static int interrupt(int set, int check);
 
 void* prunner(void* time);
 

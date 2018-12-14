@@ -29,7 +29,7 @@ void* prunner_interrupt(void* time)
 	
 	// Done running the timer?
 	// Flag th interrupt handler in the CPU.c
-	interrupt();
+	interrupt(run_time, 0);
 	
 	// return null because threads
 	return NULL;

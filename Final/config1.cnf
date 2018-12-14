@@ -1,7 +1,7 @@
 Start Simulator Configuration File:
 Version/Phase: 4.00
 File Path: testfile2.mdf
-CPU Scheduling Code: SJF-N
+CPU Scheduling Code: FCFS-P
 Quantum Time (cycles): 3
 Memory Available (KB): 1000000
 Processor Cycle Time (msec): 10

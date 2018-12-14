@@ -36,7 +36,7 @@ int start(Process *process, Config *config_data)
 			handle_output(config_data, output_buffer);
 			
 			// run the process
-			run_process_p(next_process, config_data);
+			run_process_p(next_process, process, config_data);
 			next_process = get_next_process(process, config_data);
 		}
 		// not preemptive
@@ -68,9 +68,18 @@ int start(Process *process, Config *config_data)
 
 // rinse and repeate
 
-int interrupt()
+int interrupt(int set, int check)
 {
-	interrupt_flag = 1;
+	static int interrupt_flag;
+	if(set > 0 && check == 0)
+	{
+		interrupt_flag += set;
+		return 0;
+	}
+	else if(check > 0 && set == 0)
+	{
+		return interrupt_flag;
+	}
 	return 0;
 }
 
@@ -249,7 +258,7 @@ int run_process(Process *process, Config *config_data)
 
 // Function: run_process_p() is the about the same as the run_process() but is used for
 // preemption.
-int run_process_p(Process *process, Config *config_data)
+int run_process_p(Process *process, Process *process_list, Config *config_data)
 {
 	// For output bound data.
 	char output_buffer[MAX_STRING], timestr[SMALL_STRING];
@@ -275,62 +284,80 @@ int run_process_p(Process *process, Config *config_data)
 		// Int to hold how long we are going to run for.
 		int time_to_run = 0;
 		// if the current command is an Input
-		if(tasks->command == 'I')
+		if(tasks->finished == -1)
 		{
-			accessTimer(1, timestr);
-			sprintf(output_buffer, "Time: %9s, OS: Process: %d, %s input start\n", timestr, process->PID, tasks->operation);
-			handle_output(config_data, output_buffer);
-			
-			time_to_run = tasks->cycle_time * config_data->IOCT;
-			
-			pthread_create(&thread, NULL, prunner_interrupt, (void*)time_to_run);
-			pthread_join(thread, NULL);
-			
-			accessTimer(1, timestr);
-			sprintf(output_buffer, "Time: %9s, OS: Process: %d, %s input end\n", timestr, process->PID, tasks->operation);
-			handle_output(config_data, output_buffer);
-			
-			tasks->finished = 1;
-		}
-		// If the current time is an Output
-		else if(tasks->command == 'O')
-		{
-			accessTimer(1, timestr);
-			sprintf(output_buffer, "Time: %9s, OS: Process: %d, %s output start\n", timestr, process->PID, tasks->operation);
-			handle_output(config_data, output_buffer);
-			
-			time_to_run = tasks->cycle_time * config_data->IOCT;
-			
-			pthread_create(&thread, NULL, prunner_interrupt, (void*)time_to_run);
-			pthread_join(thread, NULL);
-			
-			accessTimer(1, timestr);
-			sprintf(output_buffer, "Time: %9s, OS: Process: %d, %s output end\n", timestr, process->PID, tasks->operation);
-			handle_output(config_data, output_buffer);
-			
-			tasks->finished = 1;
-		}
-		// If the current command is run
-		else if(tasks->command == 'P')
-		{
-			accessTimer(1, timestr);
-			sprintf(output_buffer, "Time: %9s, OS: Process: %d, run operation start\n", timestr, process->PID);
-			handle_output(config_data, output_buffer);
-		
-			time_to_run = config_data->qTime;
-			
-			pthread_create(&thread, NULL, prunner, (void*)time_to_run);
-			pthread_join(thread, NULL);
-			
-			tasks->cycle_time -= config_data->qTime;
-			if(tasks->cycle_time <= 0)
+			if(tasks->command == 'I')
 			{
+				accessTimer(1, timestr);
+				sprintf(output_buffer, "\nTime: %9s, OS: Process: %d, %s input start\n\n", timestr, process->PID, tasks->operation);
+				handle_output(config_data, output_buffer);
+				
+				time_to_run = tasks->cycle_time * config_data->IOCT;
+				
+				pthread_create(&thread, NULL, prunner_interrupt, (void*)time_to_run);
+				pthread_join(thread, NULL);
+				
+				process->state = BLOCKED;
+				accessTimer(1, timestr);
+				sprintf(output_buffer, "Time: %9s, OS: Process: %d, set in BLOCKED state\n", timestr, process->PID);
+				handle_output(config_data, output_buffer);
+				
+				start(process_list, config_data);
+				tasks->finished = 1;
+			}
+			// If the current time is an Output
+			else if(tasks->command == 'O')
+			{
+				accessTimer(1, timestr);
+				sprintf(output_buffer, "\nTime: %9s, OS: Process: %d, %s output start\n\n", timestr, process->PID, tasks->operation);
+				handle_output(config_data, output_buffer);
+				
+				time_to_run = tasks->cycle_time * config_data->IOCT;
+				
+				pthread_create(&thread, NULL, prunner_interrupt, (void*)time_to_run);
+				pthread_join(thread, NULL);
+				
+				process->state = BLOCKED;
+				accessTimer(1, timestr);
+				sprintf(output_buffer, "Time: %9s, OS: Process: %d, set in BLOCKED state\n", timestr, process->PID);
+				handle_output(config_data, output_buffer);
+				
+				start(process_list, config_data);
+				tasks->finished = 1;
+			}
+			// If the current command is run
+			else if(tasks->command == 'P')
+			{
+				accessTimer(1, timestr);
+				sprintf(output_buffer, "Time: %9s, OS: Process: %d, run operation start\n", timestr, process->PID);
+				handle_output(config_data, output_buffer);
+				while(tasks->cycle_time > 0)
+				{
+					time_to_run = config_data->qTime;
+					runTimer(time_to_run);
+					tasks->cycle_time -= config_data->qTime;
+
+					if(interrupt(0, 1) > 0)
+					{
+						accessTimer(1, timestr);
+						sprintf(output_buffer, "\nFUCKING INTERRUPT BITCH\n\n");
+						handle_output(config_data, output_buffer);
+					}
+				}
+				
 				tasks->finished = 1;
 				accessTimer(1, timestr);
 				sprintf(output_buffer, "Time: %9s, OS: Process: %d, run operation end\n", timestr, process->PID);
 				handle_output(config_data, output_buffer);
+				
+				// Set the process to the running state and output that.
+				accessTimer(1, timestr);
+				process->state = READY;
+				sprintf(output_buffer, "Time: %9s, OS: Process %d set in READY state\n", timestr, process->PID);
+				handle_output(config_data, output_buffer);
 			}
-		}	
+		}
+		tasks = tasks->next;	
 	}
 	return 0;
 }
