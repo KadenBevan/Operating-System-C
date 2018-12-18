@@ -1,40 +1,5 @@
 #include "Driver.h"
 
-
-// Thread Function: prunner is used in the CPU.c
-// to run individual tasks or metadatas. This one
-// is not used for preemption
-void* prunner(void* time)
-{
-	int run_time = (int)time;
-	
-	// Use Mr. Professors timer
-	runTimer(run_time);
-	// return null because threads
-	return NULL;
-}
-
-// Thread Function: prunner is used in the CPU.c
-// to run individual tasks or metadatas. This one
-// is used for preemption
-void* prunner_interrupt(void* time)
-{
-	// Cast the time.
-	// This causes warnings when compiling
-	// I dont know why.
-	int run_time = (int)time;
-	
-	// Use Mr. Professors timer
-	runTimer(run_time);
-	
-	// Done running the timer?
-	// Flag th interrupt handler in the CPU.c
-	interrupt();
-	
-	// return null because threads
-	return NULL;
-}
-
 int main(int argc, char *argv[])
 {
 	// var to hold time

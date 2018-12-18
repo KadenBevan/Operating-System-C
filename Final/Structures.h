@@ -30,7 +30,7 @@ typedef struct Process
 	int total_cycle;
 
 	struct MetaData *operation_list;
-	struct Process  *head;
+	struct MetaData *current_operation;
 	struct Process  *next;
 } Process;
 
@@ -46,5 +46,10 @@ typedef struct MetaData
 	struct MetaData *next;
 } MetaData;
 
+typedef struct ThreadData
+{
+	int run_time;
+	struct Process *process;
+} ThreadData;
 
 #endif

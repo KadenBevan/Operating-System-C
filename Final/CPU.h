@@ -11,13 +11,11 @@
 #include "Scheduler.h"
 #include "Output_Handler.h"
 #include "MMU.h"
+#include "IOThread.h"
 
 int run_process(Process *process, Config *config_data);
-int run_process_p(Process *process, Config *config_data);
+int run_process_p(Process *process, Process *process_list, Config *config_data);
 int start(Process *process, Config *config_data);
-
-void* prunner(void* time);
-
-void* prunner_interrupt(void* time);
+Process* interrupt(Process *interrupter, int mode);
 
 #endif // !CPU_H
