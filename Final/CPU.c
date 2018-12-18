@@ -406,11 +406,8 @@ int run_process_p(Process *process, Process *process_list, Config *config_data)
 				ThreadData *data = malloc(sizeof(ThreadData));
 				data->process = process;
 				data->run_time = operation->cycle_time * config_data->IOCT;
-				
-				//process->total_cycle -= (operation->cycle_time * config_data->IOCT);
-				
+								
 				pthread_create(&thread, NULL, prunner_interrupt, (void*)data);
-				//pthread_join(thread, NULL);
 				
 				process->state = BLOCKED;
 				accessTimer(1, timestr);
@@ -426,15 +423,12 @@ int run_process_p(Process *process, Process *process_list, Config *config_data)
 				accessTimer(1, timestr);
 				sprintf(output_buffer, "Time: %9s, OS: Process %i %s output start\n", timestr, process->PID, operation->operation);
 				handle_output(config_data, output_buffer);
-				
-				//process->total_cycle -= (operation->cycle_time * config_data->IOCT);
-				
+								
 				ThreadData *data = malloc(sizeof(ThreadData));
 				data->process = process;
 				data->run_time = operation->cycle_time * config_data->IOCT;
 				
 				pthread_create(&thread, NULL, prunner_interrupt, (void*)data);
-				//pthread_join(thread, NULL);
 				
 				process->state = BLOCKED;
 				accessTimer(1, timestr);
@@ -476,8 +470,6 @@ int run_process_p(Process *process, Process *process_list, Config *config_data)
 					}
 					run_time -= config_data->qTime;
 				}
-				
-				//process->total_cycle -= config_data->PCT * operation->cycle_time;
 				
 				operation->finished = 1;
 				accessTimer(1, timestr);

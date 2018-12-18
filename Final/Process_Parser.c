@@ -34,21 +34,18 @@ Process *add_meta_to_process(MetaData *metadata)
 			// find the end of the process
 			metadata = metadata->next;
 		}
-		// give the new process the data
+		MetaData *temp = metadata->next;
+		metadata->next = NULL;
+		metadata = temp;
+		
 		new_process->PID = pid;
-		new_process->operation_list = pmeta_head->next;
+		pid++;
+		new_process->operation_list = pmeta_head;
 		new_process->next = malloc(sizeof(Process));
 		new_process = new_process->next;
 		new_process->next = NULL;
 		
-		// incriment the PID
-		pid++;
-		
-		// move the metadata pointer to the next process segment
-		pmeta_head = metadata;
-		
-		// keep track of the metadata
-		metadata = metadata->next;
+		pmeta_head = temp;
 	}
 	// return the freshly created process linked list
 	return pret_process;
@@ -145,22 +142,20 @@ int add_new_node( char *string, MetaData *meta_head )
 		new_node->finished = -1;
 		new_node->next = NULL;
 		
-		// if the current place in the list is new
-		if(meta_head->cycle_time != -1)
+		if(iterator->tail == NULL)
 		{
-			// go to the end
-			while (iterator->next != NULL)
-			{
-				iterator = iterator->next;
-			}
-			iterator->next = new_node;
+			iterator->cycle_time = cycle;
+			iterator->operation = type;
+			iterator->command = opCode;
+			iterator->finished = -1;
+			iterator->next = NULL;
+			iterator->tail = iterator;
 		}
 		else
 		{
-			// this is where I actually add the data to the end of the list
-			meta_head->cycle_time = cycle;
-			meta_head->operation = type;
-			meta_head->command = opCode;
+			MetaData *pTail = meta_head->tail;
+			pTail->next = new_node;
+			meta_head->tail = new_node;
 		}
 	}
 	// get out
