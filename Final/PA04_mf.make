@@ -3,8 +3,8 @@ DEBUG = -g
 CFLAGS = -Wall -pedantic -std=c99 -pthread -c $(DEBUG)
 LFLAGS = -Wall -pedantic -std=c99 -pthread $(DEBUG)
 
-PA04: Process_Parser.o Config_Parser.o Driver.o Utility.o Output_Handler.o Scheduler.o Timer.o CPU.o MMU.o
-	$(CC) $(LFLAGS) Process_Parser.o Config_Parser.o Driver.o Utility.o Output_Handler.o Scheduler.o Timer.o CPU.o MMU.o -o PA04
+PA04: Process_Parser.o Config_Parser.o Driver.o Utility.o Output_Handler.o Scheduler.o Timer.o CPU.o MMU.o IOThread.o
+	$(CC) $(LFLAGS) Process_Parser.o Config_Parser.o Driver.o Utility.o Output_Handler.o Scheduler.o Timer.o CPU.o MMU.o IOThread.o -o PA04
 
 Process_Parser.o: Process_Parser.c Process_Parser.h Structures.h Utility.c Utility.h
 	$(CC) $(CFLAGS) Process_Parser.c
@@ -32,6 +32,9 @@ CPU.o: CPU.c CPU.h
 
 MMU.o: MMU.c MMU.h
 	$(CC) $(CFLAGS) MMU.c
+	
+IOThread.o: IOThread.c IOThread.h
+	$(CC) $(CFLAGS) IOThread.c
 	
 clean:
 	\rm *.o PA04

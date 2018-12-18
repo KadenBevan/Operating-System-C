@@ -16,15 +16,35 @@ int ready_all(Process *process_list)
 	return 0;
 }
 
+int ready_process(Process* process_list, int PID, Config *config_data)
+{
+	char output_buffer[MAX_STRING], timestr[SMALL_STRING];
+	
+	Process *process_itr = process_list;
+	while(process_itr->next != NULL)
+	{
+		if(process_itr->PID == PID)
+		{
+			process_itr->state = READY;
+		}
+		process_itr = process_itr->next;
+	}
+	
+	// Set the process to the READY state and output that.
+	accessTimer(1, timestr);
+	sprintf(output_buffer, "Time: %9s, OS: Process %d set in READY state\n", timestr, PID);
+	handle_output(config_data, output_buffer);
+}
+
 // Function: schedule_processes acutally used to update the total cycle_time
 // all the PCBs. this is where we need to know if the task is finished or not.
-int schedule_processes(Process *processes, Config *config)
+int schedule_processes(Process *process_list, Config *config)
 {
 	int remaining_cycle;
-	Process *pprocess = processes;
+	Process *pprocess = process_list;
 	while(pprocess->next != NULL)
 	{
-		// get the total_cycle_time and update the PCb
+		// get the total_cycle_time and update the PCB
 		remaining_cycle = total_cycle_time(pprocess, config->IOCT, config->PCT);
 		pprocess->total_cycle = remaining_cycle;
 		pprocess = pprocess->next;
@@ -124,7 +144,7 @@ Process *get_next_process(Process *process_list, Config* config_data)
 		Process *process_itr = process_list;
 		while(process_itr->next != NULL)
 		{
-			if(process_itr->state == READY)
+			if(process_itr->state == READY && process_itr->total_cycle >= 1)
 			{
 				return process_itr;
 			}
