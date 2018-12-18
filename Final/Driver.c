@@ -63,6 +63,7 @@ int main(int argc, char *argv[])
 	MetaData *meta_head = malloc(sizeof(MetaData));
 	// Initialize some of the attributes
 	meta_head->next = NULL;
+	meta_head->tail = NULL;
 	meta_head->cycle_time = -1;
 	
 	// check for errors parsing the metadata

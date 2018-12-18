@@ -44,6 +44,7 @@ typedef struct MetaData
 	int finished;
 
 	struct MetaData *next;
+	struct MetaData *tail;
 } MetaData;
 
 typedef struct ThreadData
