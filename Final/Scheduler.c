@@ -137,6 +137,29 @@ Process *get_next_process(Process *process_list, Config* config_data)
 	{
 		// get the new times of the processes
 		schedule_processes(process_list, config_data);
+		int shortest_pid = -1;
+		int shortest_job = 999999;
+		Process *process_itr = process_list;
+		while(process_itr->next != NULL)
+		{
+			if(process_itr->state == READY 
+			&& process_itr->total_cycle < shortest_job)
+			{
+				shortest_job = process_itr->total_cycle;
+				shortest_pid = process_itr->PID;
+			}
+			process_itr = process_itr->next;
+		}
+		process_itr = process_list;
+		while(process_itr->next != NULL)
+		{
+			if(process_itr->PID == shortest_pid)
+			{
+				return process_itr;
+			}
+			process_itr = process_itr->next;
+		}
+		return NULL;
 	}
 	else if(strncmp(config_data->scheduleCode, "FCFS-P", 5) == 0)
 	{
@@ -151,10 +174,6 @@ Process *get_next_process(Process *process_list, Config* config_data)
 			process_itr = process_itr->next;
 		}
 		return NULL;
-	}
-	else if(strncmp(config_data->scheduleCode, "RR-P", 2) == 0)
-	{
-		
 	}
 	return 0;
 }
