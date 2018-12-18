@@ -46,19 +46,6 @@ Process *add_meta_to_process(MetaData *metadata)
 		new_process->next = NULL;
 		
 		pmeta_head = temp;
-		//MetaData *temp = metadata;
-		//metadata->next = NULL;
-		//// give the new process the data
-		//
-		//
-		//// incriment the PID
-		//pid++;
-		//
-		//// move the metadata pointer to the next process segment
-		//pmeta_head = temp;
-		//
-		//// keep track of the metadata
-		//metadata = metadata->next;
 	}
 	// return the freshly created process linked list
 	return pret_process;
