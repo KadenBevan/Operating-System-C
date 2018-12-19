@@ -4,8 +4,8 @@ File Path: MetaData/metadata4.mdf
 CPU Scheduling Code: SRTF-P
 Quantum Time (cycles): 3
 Memory Available (KB): 1000000
-Processor Cycle Time (msec): 5
-I/O Cycle Time (msec): 15
+Processor Cycle Time (msec): 2
+I/O Cycle Time (msec): 1000
 Log To: Both
 Log File Path: logfile_1.lgf
 End Simulator Configuration File.

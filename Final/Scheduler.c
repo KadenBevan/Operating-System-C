@@ -109,12 +109,22 @@ Process *get_next_process(Process *process_list, Config* config_data)
 	}
 	else if(strncmp(config_data->scheduleCode, "SJF-N", 5) == 0)
 	{
+		int max_int = 2147483647;
 		int shortest_pid = -1;
-		int shortest_job = 999999;
+		int shortest_job = max_int;
+		
 		Process *process_itr = process_list;
 		while(process_itr->next != NULL)
 		{
-			if(process_itr->state == READY 
+			if(process_itr->total_cycle >= max_int)
+			{
+				char output_buffer[MAX_STRING], timestr[SMALL_STRING];
+				accessTimer(1, timestr);
+				sprintf(output_buffer, "Time: %9s, OS: Process %d is too long and will not be run.\n", timestr, process_itr->PID);
+				handle_output(config_data, output_buffer);
+				return NULL;
+			}
+			else if(process_itr->state == READY 
 			&& process_itr->total_cycle < shortest_job)
 			{
 				shortest_job = process_itr->total_cycle;
@@ -137,12 +147,22 @@ Process *get_next_process(Process *process_list, Config* config_data)
 	{
 		// get the new times of the processes
 		schedule_processes(process_list, config_data);
+		int max_int = 2147483647;
 		int shortest_pid = -1;
-		int shortest_job = 999999;
+		int shortest_job = max_int;
+		
 		Process *process_itr = process_list;
 		while(process_itr->next != NULL)
 		{
-			if(process_itr->state == READY 
+			if(process_itr->total_cycle >= max_int)
+			{
+				char output_buffer[MAX_STRING], timestr[SMALL_STRING];
+				accessTimer(1, timestr);
+				sprintf(output_buffer, "Time: %9s, OS: Process %d is too long and will not be run.\n", timestr, process_itr->PID);
+				handle_output(config_data, output_buffer);
+				return NULL;
+			}
+			else if(process_itr->state == READY 
 			&& process_itr->total_cycle < shortest_job)
 			{
 				shortest_job = process_itr->total_cycle;
