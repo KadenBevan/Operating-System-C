@@ -12,3 +12,6 @@ To compile this program use something make -f "PA04_mf.make" or something simila
 # Running
 To run the program type ./PA04 "config file" where the config file is a valid config file as per the specifications.
 The metadata file must be in the same directory as the config file and application.
+
+# For More Information
+Read the OS_Specifications_05Nov2018_v01.pdf in the Docs dir.
