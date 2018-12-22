@@ -1,5 +1,8 @@
 #include "Driver.h"
 
+pthread_mutex_t PCB_MUTEX = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t INTERRUPT_MUTEX = PTHREAD_MUTEX_INITIALIZER;
+
 int main(int argc, char *argv[])
 {
 	// var to hold time
@@ -88,7 +91,7 @@ int main(int argc, char *argv[])
 	
 	// find the total cycle time for the entire process
 	int total_cycle_time;
-	total_cycle_time = schedule_processes(process, &config_data);
+	total_cycle_time = update_pcb_time(process, &config_data);
 	
 	// Set all the processes to the ready state
 	ready_all(process);
@@ -98,8 +101,13 @@ int main(int argc, char *argv[])
 	sprintf(output_buffer, "Time: %9s, OS: All processes now set in Ready state\n", timestr);
 	handle_output(&config_data, output_buffer);
 	
-	// CPU.c:Start() running the processes
-	start(process, &config_data);
+	//pthread_mutex_init(&PCB_MUTEX, NULL);
+	//pthread_mutex_init(&INTERRUPT_MUTEX, NULL);
+	//PCB_MUTEX = PTHREAD_MUTEX_INITIALIZER;
+	
+	init_interrupt_watcher(&config_data);
+	
+	run(process, &config_data);
 	
 	// output system info
 	accessTimer(1, timestr);

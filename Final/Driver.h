@@ -13,5 +13,9 @@
 #include "Scheduler.h"
 #include "Timer.h"
 #include "CPU.h"
+#include "Threads.h"
+
+extern pthread_mutex_t PCB_MUTEX;
+extern pthread_mutex_t INTERRUPT_MUTEX;
 
 #endif // !DRIVER_H

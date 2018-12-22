@@ -1,4 +1,5 @@
 #include "Scheduler.h"
+#include "Driver.h"
 
 // Function: ready_all is called from the Driver.c
 // pretty much used to ready all the processes 
@@ -6,6 +7,7 @@ int ready_all(Process *process_list)
 {
 	// declare an iterator to loop through the
 	// process list arg with out modifying it.
+	pthread_mutex_lock(&PCB_MUTEX);
 	Process *process_itr = process_list;
 	while(process_itr->next != NULL)
 	{
@@ -13,33 +15,106 @@ int ready_all(Process *process_list)
 		process_itr->state = READY;
 		process_itr = process_itr->next;
 	}
+	pthread_mutex_unlock(&PCB_MUTEX);
 	return 0;
 }
 
-int ready_process(Process* process_list, int PID, Config *config_data)
+int sub_cycle(MetaData *current_operation, int cycle_time)
 {
-	char output_buffer[MAX_STRING], timestr[SMALL_STRING];
-	
-	Process *process_itr = process_list;
-	while(process_itr->next != NULL)
+	pthread_mutex_lock(&PCB_MUTEX);
+	MetaData *operation = NULL;
+	operation = current_operation;
+	if(operation->cycle_time > 0)
 	{
-		if(process_itr->PID == PID)
-		{
-			process_itr->state = READY;
-		}
-		process_itr = process_itr->next;
+		operation->cycle_time -= cycle_time;
 	}
-	
-	// Set the process to the READY state and output that.
-	accessTimer(1, timestr);
-	sprintf(output_buffer, "Time: %9s, OS: Process %d set in READY state\n", timestr, PID);
-	handle_output(config_data, output_buffer);
+	pthread_mutex_unlock(&PCB_MUTEX);
+	return 0;
 }
 
-// Function: schedule_processes acutally used to update the total cycle_time
-// all the PCBs. this is where we need to know if the task is finished or not.
-int schedule_processes(Process *process_list, Config *config)
+int run_process(Process *process, Config *config_data)
 {
+	pthread_mutex_lock(&PCB_MUTEX);
+	char output_buffer[MAX_STRING], timestr[SMALL_STRING];
+	
+	Process *process_p = NULL;
+	process_p = process;
+	
+	if (process_p != NULL)
+	{
+		process_p->state = RUNNING;
+		accessTimer(1, timestr);
+		sprintf(output_buffer, "Time: %9s, OS: Process %i set in RUNNING state\n", 
+				timestr, process->PID);
+		handle_output(config_data, output_buffer);
+	}
+	pthread_mutex_unlock(&PCB_MUTEX);
+	return 0;
+}
+
+int ready_process(Process *process, Config *config_data)
+{
+	pthread_mutex_lock(&PCB_MUTEX);
+	char output_buffer[MAX_STRING], timestr[SMALL_STRING];
+	
+	Process *process_p = NULL;
+	process_p = process;
+	
+	if (process_p != NULL)
+	{
+		process_p->state = READY;
+		accessTimer(1, timestr);
+		sprintf(output_buffer, "Time: %9s, OS: Process %i set in READY state\n", 
+				timestr, process->PID);
+		handle_output(config_data, output_buffer);
+	}
+	pthread_mutex_unlock(&PCB_MUTEX);
+	return 0;
+}
+
+int block_process(Process *process, Config *config_data)
+{
+	pthread_mutex_lock(&PCB_MUTEX);
+	char output_buffer[MAX_STRING], timestr[SMALL_STRING];
+	
+	Process *process_p = NULL;
+	process_p = process;
+	if (process_p != NULL)
+	{
+		process_p->state = BLOCKED;
+		accessTimer(1, timestr);
+		sprintf(output_buffer, "Time: %9s, OS: Process %i set in BLOCKED state\n", 
+				timestr, process->PID);
+		handle_output(config_data, output_buffer);
+	}
+	pthread_mutex_unlock(&PCB_MUTEX);
+	return 0;
+}
+
+int exit_process(Process *process, Config *config_data)
+{
+	pthread_mutex_lock(&PCB_MUTEX);
+	char output_buffer[MAX_STRING], timestr[SMALL_STRING];
+	
+	Process *process_p = NULL;
+	process_p = process;
+	if (process_p != NULL)
+	{
+		process_p->state = EXIT;
+		accessTimer(1, timestr);
+		sprintf(output_buffer, "Time: %9s, OS: Process %i set in EXIT state\n", 
+				timestr, process->PID);
+		handle_output(config_data, output_buffer);
+	}
+	pthread_mutex_unlock(&PCB_MUTEX);
+	return 0;
+}
+
+// Function: update_pcb_time acutally used to update the total cycle_time
+// all the PCBs. this is where we need to know if the task is finished or not.
+int update_pcb_time(Process *process_list, Config *config)
+{
+	pthread_mutex_lock(&PCB_MUTEX);
 	int remaining_cycle;
 	Process *pprocess = process_list;
 	while(pprocess->next != NULL)
@@ -50,6 +125,7 @@ int schedule_processes(Process *process_list, Config *config)
 		pprocess = pprocess->next;
 		remaining_cycle = 0;
 	}
+	pthread_mutex_unlock(&PCB_MUTEX);
 	// return that new cycle time.
 	return remaining_cycle;
 }
@@ -146,7 +222,6 @@ Process *get_next_process(Process *process_list, Config* config_data)
 	else if(strncmp(config_data->scheduleCode, "SRTF-P", 5) == 0)
 	{
 		// get the new times of the processes
-		schedule_processes(process_list, config_data);
 		int max_int = 2147483647;
 		int shortest_pid = -1;
 		int shortest_job = max_int;
@@ -183,7 +258,6 @@ Process *get_next_process(Process *process_list, Config* config_data)
 	}
 	else if(strncmp(config_data->scheduleCode, "FCFS-P", 5) == 0)
 	{
-		schedule_processes(process_list, config_data);
 		Process *process_itr = process_list;
 		while(process_itr->next != NULL)
 		{

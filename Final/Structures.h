@@ -1,6 +1,8 @@
 #ifndef STRUCTURES_H
 #define STRUCTURES_H
 
+#include <pthread.h>
+
 //Constants
 #define MAX_STRING 256
 #define MEDIUM_STRING 128
@@ -25,6 +27,8 @@ typedef struct Config
 // also used as a linked list
 typedef struct Process
 {
+	pthread_mutex_t lock;
+	
 	int PID;
 	enum state {NEW, READY, BLOCKED, RUNNING, EXIT} state;
 	int total_cycle;
@@ -38,6 +42,8 @@ typedef struct Process
 // but this list is attached to a PCB or process.
 typedef struct MetaData
 {
+	pthread_mutex_t lock;
+	
 	int cycle_time;
 	char command;
 	char* operation;
@@ -47,10 +53,16 @@ typedef struct MetaData
 	struct MetaData *tail;
 } MetaData;
 
-typedef struct ThreadData
+typedef struct IOThreadData
 {
+	struct Locks *locks;
 	int run_time;
 	struct Process *process;
-} ThreadData;
+} IOThreadData;
+
+typedef struct WatchThreadData
+{
+	struct Config *config;
+} WatchThreadData;
 
 #endif
