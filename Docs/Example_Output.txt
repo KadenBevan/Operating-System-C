@@ -1,0 +1,971 @@
+Simulator Program
+=================
+
+Uploading Configuration Files
+
+Uploading Meta Data Files
+
+=================
+Begin Simulation
+
+Time:  0.031501, System Start
+Time:  0.043235, OS: Begin PCB Creation
+Time:  0.053783, OS: All processes now set in New state
+Time:  0.061281, OS: All processes now set in Ready state
+Time:  0.071857, OS: Discovered scheduling type: SRTF-P
+Time:  0.080463, OS: Process 1 selected with 916 ms remaining
+Time:  0.087736, OS: Process 1 set in RUNNING state
+Time:  0.093164, OS: Process 1 printer output start
+Time:  0.101592, OS: Process 1 set in BLOCKED state
+Time:  0.110159, OS: Process 2 selected with 1976 ms remaining
+Time:  0.118276, OS: Process 2 set in RUNNING state
+Time:  0.130727, OS: Process 2 run operation start
+Time:  0.141055, OS: Process 2 run cycle complete
+Time:  0.148619, OS: Process 2 set in READY state
+Time:  0.158616, OS: Process 2 selected with 1970 ms remaining
+#
+#
+#
+#
+Time:  0.168254, OS: Interrupt by Process 1
+#
+#
+#
+#
+#Time:  0.168777, OS: Process 2 set in RUNNING state
+Time:  0.176644, OS: Process 1 printer IO end
+Time:  0.183622, OS: Process 2 run operation start
+Time:  0.193486, OS: Process 1 set in READY state
+Time:  0.207207, OS: Process 2 run cycle complete
+Time:  0.215618, OS: Process 2 set in READY state
+Time:  0.225967, OS: Process 1 selected with 858 ms remaining
+Time:  0.233125, OS: Process 1 set in RUNNING state
+Time:  0.239023, OS: Process 1 run operation start
+Time:  0.250707, OS: Process 1 run cycle complete
+Time:  0.259519, OS: Process 1 set in READY state
+Time:  0.268095, OS: Process 1 selected with 852 ms remaining
+Time:  0.276834, OS: Process 1 set in RUNNING state
+Time:  0.283224, OS: Process 1 run operation start
+Time:  0.296551, OS: Process 1 run cycle complete
+Time:  0.306370, OS: Process 1 set in READY state
+Time:  0.314411, OS: Process 1 selected with 846 ms remaining
+Time:  0.325800, OS: Process 1 set in RUNNING state
+Time:  0.334985, OS: Process 1 run operation start
+Time:  0.344305, OS: Process 1 run cycle complete
+Time:  0.350984, OS: Process 1 set in READY state
+Time:  0.357846, OS: Process 1 selected with 840 ms remaining
+Time:  0.368292, OS: Process 1 set in RUNNING state
+Time:  0.375638, OS: Process 1 run operation start
+Time:  0.383702, OS: Process 1 run cycle complete
+Time:  0.391198, OS: Process 1 set in READY state
+Time:  0.403187, OS: Process 1 selected with 834 ms remaining
+Time:  0.412818, OS: Process 1 set in RUNNING state
+Time:  0.422367, OS: Process 1 run operation start
+Time:  0.434193, OS: Process 1 run cycle complete
+Time:  0.442731, OS: Process 1 set in READY state
+Time:  0.453111, OS: Process 1 selected with 828 ms remaining
+Time:  0.462547, OS: Process 1 set in RUNNING state
+Time:  0.471267, OS: Process 1 run operation start
+Time:  0.488037, OS: Process 1 run cycle complete
+Time:  0.496630, OS: Process 1 set in READY state
+Time:  0.507784, OS: Process 1 selected with 822 ms remaining
+Time:  0.520259, OS: Process 1 set in RUNNING state
+Time:  0.527889, OS: Process 1 run operation start
+Time:  0.537509, OS: Process 1 run cycle complete
+Time:  0.543351, OS: Process 1 set in READY state
+Time:  0.551821, OS: Process 1 selected with 816 ms remaining
+Time:  0.561335, OS: Process 1 set in RUNNING state
+Time:  0.570577, OS: Process 1 run operation start
+Time:  0.583303, OS: Process 1 run cycle complete
+Time:  0.594797, OS: Process 1 set in READY state
+Time:  0.604966, OS: Process 1 selected with 810 ms remaining
+Time:  0.612670, OS: Process 1 set in RUNNING state
+Time:  0.619792, OS: Process 1 run operation start
+Time:  0.629771, OS: Process 1 run cycle complete
+Time:  0.638991, OS: Process 1 set in READY state
+Time:  0.646763, OS: Process 1 selected with 804 ms remaining
+Time:  0.654001, OS: Process 1 set in RUNNING state
+Time:  0.662279, OS: Process 1 run operation start
+Time:  0.673979, OS: Process 1 run operation end
+Time:  0.683236, OS: Process 1 set in READY state
+Time:  0.691288, OS: Process 1 selected with 798 ms remaining
+Time:  0.700027, OS: Process 1 set in RUNNING state
+Time:  0.708383, OS: Process 1 printer output start
+Time:  0.716660, OS: Process 1 set in BLOCKED state
+Time:  0.723110, OS: Process 2 selected with 1964 ms remaining
+Time:  0.732524, OS: Process 2 set in RUNNING state
+Time:  0.742047, OS: Process 2 run operation start
+Time:  0.752310, OS: Process 2 run cycle complete
+Time:  0.760798, OS: Process 2 set in READY state
+Time:  0.771949, OS: Process 2 selected with 1958 ms remaining
+Time:  0.779004, OS: Process 2 set in RUNNING state
+Time:  0.786596, OS: Process 2 run operation start
+Time:  0.797389, OS: Process 2 run cycle complete
+Time:  0.805304, OS: Process 2 set in READY state
+Time:  0.813711, OS: Process 2 selected with 1952 ms remaining
+Time:  0.821711, OS: Process 2 set in RUNNING state
+Time:  0.830655, OS: Process 2 run operation start
+Time:  0.843287, OS: Process 2 run cycle complete
+Time:  0.851764, OS: Process 2 set in READY state
+Time:  0.860190, OS: Process 2 selected with 1946 ms remaining
+Time:  0.868051, OS: Process 2 set in RUNNING state
+Time:  0.877769, OS: Process 2 run operation start
+Time:  0.891610, OS: Process 2 run cycle complete
+Time:  0.900651, OS: Process 2 set in READY state
+Time:  0.908632, OS: Process 2 selected with 1940 ms remaining
+Time:  0.917027, OS: Process 2 set in RUNNING state
+Time:  0.924616, OS: Process 2 run operation start
+Time:  0.939977, OS: Process 2 run cycle complete
+Time:  0.949792, OS: Process 2 set in READY state
+Time:  0.958839, OS: Process 2 selected with 1934 ms remaining
+Time:  0.967110, OS: Process 2 set in RUNNING state
+Time:  0.975045, OS: Process 2 run operation start
+Time:  0.983471, OS: Process 2 run cycle complete
+Time:  0.989266, OS: Process 2 set in READY state
+Time:  0.997117, OS: Process 2 selected with 1928 ms remaining
+Time:  1.007204, OS: Process 2 set in RUNNING state
+Time:  1.014326, OS: Process 2 run operation start
+Time:  1.027259, OS: Process 2 run cycle complete
+Time:  1.036146, OS: Process 2 set in READY state
+Time:  1.043413, OS: Process 2 selected with 1922 ms remaining
+#
+#
+#
+#
+Time:  1.045159, OS: Interrupt by Process 1
+#
+#
+#
+#
+#Time:  1.053075, OS: Process 2 set in RUNNING state
+Time:  1.060155, OS: Process 1 printer IO end
+Time:  1.067451, OS: Process 2 run operation start
+Time:  1.074344, OS: Process 1 set in READY state
+Time:  1.084864, OS: Process 2 run cycle complete
+Time:  1.092582, OS: Process 2 set in READY state
+Time:  1.101611, OS: Process 1 selected with 476 ms remaining
+Time:  1.112909, OS: Process 1 set in RUNNING state
+Time:  1.122097, OS: Process 1 harddrive input start
+Time:  1.129567, OS: Process 1 set in BLOCKED state
+Time:  1.141467, OS: Process 2 selected with 1916 ms remaining
+Time:  1.154462, OS: Process 2 set in RUNNING state
+Time:  1.160487, OS: Process 2 run operation start
+Time:  1.171692, OS: Process 2 run cycle complete
+Time:  1.180075, OS: Process 2 set in READY state
+Time:  1.191075, OS: Process 2 selected with 1910 ms remaining
+Time:  1.201002, OS: Process 2 set in RUNNING state
+Time:  1.210904, OS: Process 2 run operation start
+Time:  1.223401, OS: Process 2 run cycle complete
+Time:  1.233741, OS: Process 2 set in READY state
+Time:  1.242411, OS: Process 2 selected with 1904 ms remaining
+Time:  1.251789, OS: Process 2 set in RUNNING state
+Time:  1.261938, OS: Process 2 run operation start
+Time:  1.273836, OS: Process 2 run cycle complete
+Time:  1.280675, OS: Process 2 set in READY state
+#
+#
+#
+#
+Time:  1.281512, OS: Interrupt by Process 1
+#
+#
+#
+#
+#Time:  1.292090, OS: Process 2 selected with 1898 ms remaining
+Time:  1.301275, OS: Process 1 harddrive IO end
+Time:  1.311050, OS: Process 2 set in RUNNING state
+Time:  1.330114, OS: Process 2 run operation start
+Time:  1.330121, OS: Process 1 set in READY state
+Time:  1.345901, OS: Process 2 run cycle complete
+Time:  1.354894, OS: Process 2 set in READY state
+Time:  1.364318, OS: Process 1 selected with 336 ms remaining
+Time:  1.371311, OS: Process 1 set in RUNNING state
+Time:  1.378887, OS: Process 1 printer output start
+Time:  1.389410, OS: Process 1 set in BLOCKED state
+Time:  1.399053, OS: Process 2 selected with 1892 ms remaining
+Time:  1.409478, OS: Process 2 set in RUNNING state
+Time:  1.419410, OS: Process 2 run operation start
+Time:  1.432334, OS: Process 2 run cycle complete
+#
+#
+#
+#
+Time:  1.437101, OS: Interrupt by Process 1
+#
+#
+#
+#
+#Time:  1.440341, OS: Process 2 set in READY state
+Time:  1.450030, OS: Process 1 printer IO end
+Time:  1.457821, OS: Process 2 selected with 1886 ms remaining
+Time:  1.467976, OS: Process 1 set in READY state
+Time:  1.485187, OS: Process 2 set in RUNNING state
+Time:  1.492895, OS: Process 2 run operation start
+Time:  1.506081, OS: Process 2 run cycle complete
+Time:  1.516631, OS: Process 2 set in READY state
+Time:  1.521873, OS: Process 1 selected with 298 ms remaining
+Time:  1.530094, OS: Process 1 set in RUNNING state
+Time:  1.542029, OS: Process 1 printer output start
+Time:  1.553693, OS: Process 1 set in BLOCKED state
+Time:  1.560443, OS: Process 2 selected with 1880 ms remaining
+Time:  1.566311, OS: Process 2 set in RUNNING state
+Time:  1.572884, OS: Process 2 run operation start
+Time:  1.584053, OS: Process 2 run operation end
+Time:  1.592182, OS: Process 2 set in READY state
+#
+#
+#
+#
+Time:  1.590493, OS: Interrupt by Process 1
+#
+#
+#
+#
+#Time:  1.599930, OS: Process 2 selected with 1874 ms remaining
+Time:  1.606543, OS: Process 1 printer IO end
+Time:  1.615168, OS: Process 2 set in RUNNING state
+Time:  1.627397, OS: Process 2 keyboard input start
+Time:  1.627404, OS: Process 1 set in READY state
+Time:  1.643276, OS: Process 2 set in BLOCKED state
+Time:  1.650066, OS: Process 1 selected with 268 ms remaining
+Time:  1.656643, OS: Process 1 set in RUNNING state
+Time:  1.665809, OS: Process 1 keyboard input start
+Time:  1.674564, OS: Process 1 set in BLOCKED state
+Time:  1.682948, OS: Process 0 selected with 2878 ms remaining
+Time:  1.690702, OS: Process 0 set in RUNNING state
+#
+#
+#
+#
+Time:  1.702120, OS: Interrupt by Process 2
+#
+#
+#
+#
+#Time:  1.703735, OS: Process 0 keyboard input start
+Time:  1.711967, OS: Process 2 keyboard IO end
+Time:  1.720784, OS: Process 0 set in BLOCKED state
+Time:  1.735633, OS: Process 2 set in READY state
+Time:  1.743111, OS: Process 2 selected with 1822 ms remaining
+Time:  1.751074, OS: Process 2 set in RUNNING state
+Time:  1.759563, OS: Process 2 run operation start
+Time:  1.769419, OS: Process 2 run cycle complete
+#
+#
+#
+#
+Time:  1.769709, OS: Interrupt by Process 0
+#
+#
+#
+#
+#Time:  1.776623, OS: Process 2 set in READY state
+Time:  1.783583, OS: Process 0 keyboard IO end
+Time:  1.791950, OS: Process 2 selected with 1816 ms remaining
+Time:  1.801890, OS: Process 0 set in READY state
+Time:  1.816269, OS: Process 2 set in RUNNING state
+Time:  1.824972, OS: Process 2 run operation start
+Time:  1.835445, OS: Process 2 run cycle complete
+Time:  1.843749, OS: Process 2 set in READY state
+Time:  1.851674, OS: Process 2 selected with 1810 ms remaining
+Time:  1.860993, OS: Process 2 set in RUNNING state
+Time:  1.870304, OS: Process 2 run operation start
+Time:  1.881113, OS: Process 2 run cycle complete
+Time:  1.888826, OS: Process 2 set in READY state
+Time:  1.897300, OS: Process 2 selected with 1804 ms remaining
+Time:  1.905125, OS: Process 2 set in RUNNING state
+Time:  1.916101, OS: Process 2 run operation start
+#
+#
+#
+#
+Time:  1.918998, OS: Interrupt by Process 1
+#
+#
+#
+#
+#Time:  1.933959, OS: Process 1 keyboard IO end
+Time:  1.927504, OS: Process 2 run cycle complete
+Time:  1.943261, OS: Process 1 set in READY state
+Time:  1.963642, OS: Process 2 set in READY state
+Time:  1.974674, OS: Process 1 selected with 32 ms remaining
+Time:  1.981612, OS: Process 1 set in RUNNING state
+Time:  1.988570, OS: Process 1 run operation start
+Time:  1.998286, OS: Process 1 run cycle complete
+Time:  2.006402, OS: Process 1 set in READY state
+Time:  2.017402, OS: Process 1 selected with 26 ms remaining
+Time:  2.024853, OS: Process 1 set in RUNNING state
+Time:  2.034188, OS: Process 1 run operation start
+Time:  2.045444, OS: Process 1 run cycle complete
+Time:  2.058989, OS: Process 1 set in READY state
+Time:  2.066097, OS: Process 1 selected with 20 ms remaining
+Time:  2.074957, OS: Process 1 set in RUNNING state
+Time:  2.084451, OS: Process 1 run operation start
+Time:  2.097952, OS: Process 1 run cycle complete
+Time:  2.105174, OS: Process 1 set in READY state
+Time:  2.113856, OS: Process 1 selected with 14 ms remaining
+Time:  2.122356, OS: Process 1 set in RUNNING state
+Time:  2.130574, OS: Process 1 run operation start
+Time:  2.142595, OS: Process 1 run cycle complete
+Time:  2.155243, OS: Process 1 set in READY state
+Time:  2.165620, OS: Process 1 selected with 8 ms remaining
+Time:  2.175324, OS: Process 1 set in RUNNING state
+Time:  2.183582, OS: Process 1 run operation start
+Time:  2.195805, OS: Process 1 run cycle complete
+Time:  2.207541, OS: Process 1 set in READY state
+Time:  2.217633, OS: Process 1 selected with 2 ms remaining
+Time:  2.226126, OS: Process 1 set in RUNNING state
+Time:  2.236569, OS: Process 1 run operation start
+Time:  2.247346, OS: Process 1 run operation end
+Time:  2.258226, OS: Process 1 set in READY state
+Time:  2.266995, OS: Process 1 selected with 0 ms remaining
+Time:  2.276494, OS: Process 1 set in RUNNING state
+Time:  2.284826, OS: Process 1 set in EXIT state
+Time:  2.293424, OS: Process 2 selected with 1798 ms remaining
+Time:  2.305072, OS: Process 2 set in RUNNING state
+Time:  2.314995, OS: Process 2 run operation start
+Time:  2.330192, OS: Process 2 run cycle complete
+Time:  2.336837, OS: Process 2 set in READY state
+Time:  2.346553, OS: Process 2 selected with 1792 ms remaining
+Time:  2.354709, OS: Process 2 set in RUNNING state
+Time:  2.363183, OS: Process 2 run operation start
+Time:  2.373820, OS: Process 2 run cycle complete
+Time:  2.380665, OS: Process 2 set in READY state
+Time:  2.393011, OS: Process 2 selected with 1786 ms remaining
+Time:  2.403808, OS: Process 2 set in RUNNING state
+Time:  2.416259, OS: Process 2 run operation start
+Time:  2.427259, OS: Process 2 run cycle complete
+Time:  2.436909, OS: Process 2 set in READY state
+Time:  2.446053, OS: Process 2 selected with 1780 ms remaining
+Time:  2.455306, OS: Process 2 set in RUNNING state
+Time:  2.464128, OS: Process 2 run operation start
+Time:  2.474303, OS: Process 2 run cycle complete
+Time:  2.481487, OS: Process 2 set in READY state
+Time:  2.488616, OS: Process 2 selected with 1774 ms remaining
+Time:  2.497680, OS: Process 2 set in RUNNING state
+Time:  2.509593, OS: Process 2 run operation start
+Time:  2.522785, OS: Process 2 run cycle complete
+Time:  2.532221, OS: Process 2 set in READY state
+Time:  2.540477, OS: Process 2 selected with 1768 ms remaining
+Time:  2.549792, OS: Process 2 set in RUNNING state
+Time:  2.559735, OS: Process 2 run operation start
+Time:  2.571487, OS: Process 2 run cycle complete
+Time:  2.580211, OS: Process 2 set in READY state
+Time:  2.590278, OS: Process 2 selected with 1762 ms remaining
+Time:  2.596926, OS: Process 2 set in RUNNING state
+Time:  2.606265, OS: Process 2 run operation start
+Time:  2.619594, OS: Process 2 run cycle complete
+Time:  2.625223, OS: Process 2 set in READY state
+Time:  2.634904, OS: Process 2 selected with 1756 ms remaining
+Time:  2.645325, OS: Process 2 set in RUNNING state
+Time:  2.652299, OS: Process 2 run operation start
+Time:  2.664222, OS: Process 2 run cycle complete
+Time:  2.672477, OS: Process 2 set in READY state
+Time:  2.681854, OS: Process 2 selected with 1750 ms remaining
+Time:  2.694310, OS: Process 2 set in RUNNING state
+Time:  2.702237, OS: Process 2 run operation start
+Time:  2.712299, OS: Process 2 run cycle complete
+Time:  2.722139, OS: Process 2 set in READY state
+Time:  2.730674, OS: Process 2 selected with 1744 ms remaining
+Time:  2.738636, OS: Process 2 set in RUNNING state
+Time:  2.745690, OS: Process 2 run operation start
+Time:  2.758644, OS: Process 2 run cycle complete
+Time:  2.766714, OS: Process 2 set in READY state
+Time:  2.774544, OS: Process 2 selected with 1738 ms remaining
+Time:  2.783369, OS: Process 2 set in RUNNING state
+Time:  2.793748, OS: Process 2 run operation start
+Time:  2.807967, OS: Process 2 run cycle complete
+Time:  2.818621, OS: Process 2 set in READY state
+Time:  2.827073, OS: Process 2 selected with 1732 ms remaining
+Time:  2.837161, OS: Process 2 set in RUNNING state
+Time:  2.846198, OS: Process 2 run operation start
+Time:  2.858965, OS: Process 2 run cycle complete
+Time:  2.871155, OS: Process 2 set in READY state
+Time:  2.881320, OS: Process 2 selected with 1726 ms remaining
+Time:  2.892049, OS: Process 2 set in RUNNING state
+Time:  2.901236, OS: Process 2 run operation start
+Time:  2.914887, OS: Process 2 run operation end
+Time:  2.923625, OS: Process 2 set in READY state
+Time:  2.933639, OS: Process 2 selected with 1724 ms remaining
+Time:  2.939860, OS: Process 2 set in RUNNING state
+Time:  2.945937, OS: Process 2 keyboard input start
+Time:  2.951933, OS: Process 2 set in BLOCKED state
+Time:  2.960329, OS: Process 0 selected with 2844 ms remaining
+Time:  2.971633, OS: Process 0 set in RUNNING state
+Time:  2.980399, OS: Process 0 keyboard input start
+Time:  2.990901, OS: Process 0 set in BLOCKED state
+Time:  3.000021, OS: System Idle
+#
+#
+#
+#
+Time:  3.136377, OS: Interrupt by Process 2
+#
+#
+#
+#
+#Time:  3.145161, OS: Process 2 keyboard IO end
+Time:  3.154334, OS: Process 2 set in READY state
+Time:  3.165096, OS: Process 2 selected with 1548 ms remaining
+#
+#
+#
+#
+Time:  3.166068, OS: Interrupt by Process 0
+#
+#
+#
+#
+#Time:  3.176060, OS: Process 2 set in RUNNING state
+Time:  3.185550, OS: Process 0 keyboard IO end
+Time:  3.193152, OS: Process 2 keyboard input start
+Time:  3.204204, OS: Process 0 set in READY state
+Time:  3.219736, OS: Process 2 set in BLOCKED state
+Time:  3.227911, OS: Process 0 selected with 2678 ms remaining
+Time:  3.236551, OS: Process 0 set in RUNNING state
+Time:  3.246834, OS: Process 0 keyboard input start
+Time:  3.255404, OS: Process 0 set in BLOCKED state
+Time:  3.265088, OS: System Idle
+#
+#
+#
+#
+Time:  3.367966, OS: Interrupt by Process 2
+#
+#
+#
+#
+#Time:  3.373388, OS: Process 2 keyboard IO end
+Time:  3.379401, OS: Process 2 set in READY state
+Time:  3.391129, OS: Process 2 selected with 1408 ms remaining
+Time:  3.401490, OS: Process 2 set in RUNNING state
+Time:  3.408069, OS: Process 2 printer output start
+Time:  3.418600, OS: Process 2 set in BLOCKED state
+Time:  3.430081, OS: System Idle
+#
+#
+#
+#
+Time:  3.531138, OS: Interrupt by Process 0
+#
+#
+#
+#
+#Time:  3.540324, OS: Process 0 keyboard IO end
+Time:  3.549552, OS: Process 0 set in READY state
+Time:  3.559235, OS: Process 0 selected with 2412 ms remaining
+Time:  3.566920, OS: Process 0 set in RUNNING state
+Time:  3.576311, OS: Process 0 printer output start
+Time:  3.586163, OS: Process 0 set in BLOCKED state
+Time:  3.594891, OS: System Idle
+#
+#
+#
+#
+Time:  3.682949, OS: Interrupt by Process 0
+#
+#
+#
+#
+#Time:  3.694775, OS: Process 0 printer IO end
+Time:  3.701610, OS: Process 0 set in READY state
+Time:  3.712014, OS: Process 0 selected with 2324 ms remaining
+#
+#
+#
+#
+Time:  3.714128, OS: Interrupt by Process 2
+#
+#
+#
+#
+#Time:  3.720896, OS: Process 0 set in RUNNING state
+Time:  3.729078, OS: Process 2 printer IO end
+Time:  3.738081, OS: Process 0 keyboard input start
+Time:  3.743092, OS: Process 2 set in READY state
+Time:  3.760854, OS: Process 0 set in BLOCKED state
+Time:  3.768411, OS: Process 2 selected with 1124 ms remaining
+Time:  3.777522, OS: Process 2 set in RUNNING state
+Time:  3.784671, OS: Process 2 printer output start
+Time:  3.795832, OS: Process 2 set in BLOCKED state
+Time:  3.806460, OS: System Idle
+#
+#
+#
+#
+Time:  3.930460, OS: Interrupt by Process 0
+#
+#
+#
+#
+#Time:  3.941229, OS: Process 0 keyboard IO end
+Time:  3.946809, OS: Process 0 set in READY state
+Time:  3.954140, OS: Process 0 selected with 2162 ms remaining
+Time:  3.965085, OS: Process 0 set in RUNNING state
+Time:  3.970012, OS: Process 0 keyboard input start
+Time:  3.981254, OS: Process 0 set in BLOCKED state
+Time:  3.989889, OS: System Idle
+#
+#
+#
+#
+Time:  4.074509, OS: Interrupt by Process 2
+#
+#
+#
+#
+#Time:  4.081593, OS: Process 2 printer IO end
+Time:  4.090165, OS: Process 2 set in READY state
+Time:  4.096951, OS: Process 2 selected with 856 ms remaining
+Time:  4.107513, OS: Process 2 set in RUNNING state
+Time:  4.119917, OS: Process 2 printer output start
+Time:  4.125867, OS: Process 2 set in BLOCKED state
+Time:  4.136820, OS: System Idle
+#
+#
+#
+#
+Time:  4.337934, OS: Interrupt by Process 0
+#
+#
+#
+#
+#Time:  4.343706, OS: Process 0 keyboard IO end
+Time:  4.353434, OS: Process 0 set in READY state
+Time:  4.360875, OS: Process 0 selected with 1814 ms remaining
+#
+#
+#
+#
+Time:  4.360963, OS: Interrupt by Process 2
+#
+#
+#
+#
+#Time:  4.367163, OS: Process 0 set in RUNNING state
+Time:  4.375047, OS: Process 2 printer IO end
+Time:  4.382749, OS: Process 0 run operation start
+Time:  4.388214, OS: Process 2 set in READY state
+Time:  4.399781, OS: Process 0 run cycle complete
+Time:  4.408495, OS: Process 0 set in READY state
+Time:  4.419623, OS: Process 2 selected with 634 ms remaining
+Time:  4.425945, OS: Process 2 set in RUNNING state
+Time:  4.433980, OS: Process 2 run operation start
+Time:  4.443694, OS: Process 2 run cycle complete
+Time:  4.450994, OS: Process 2 set in READY state
+Time:  4.459386, OS: Process 2 selected with 628 ms remaining
+Time:  4.464208, OS: Process 2 set in RUNNING state
+Time:  4.473490, OS: Process 2 run operation start
+Time:  4.485689, OS: Process 2 run cycle complete
+Time:  4.497049, OS: Process 2 set in READY state
+Time:  4.506380, OS: Process 2 selected with 622 ms remaining
+Time:  4.515105, OS: Process 2 set in RUNNING state
+Time:  4.526208, OS: Process 2 run operation start
+Time:  4.539206, OS: Process 2 run cycle complete
+Time:  4.546758, OS: Process 2 set in READY state
+Time:  4.558963, OS: Process 2 selected with 616 ms remaining
+Time:  4.568725, OS: Process 2 set in RUNNING state
+Time:  4.577667, OS: Process 2 run operation start
+Time:  4.590553, OS: Process 2 run cycle complete
+Time:  4.596675, OS: Process 2 set in READY state
+Time:  4.604277, OS: Process 2 selected with 610 ms remaining
+Time:  4.611231, OS: Process 2 set in RUNNING state
+Time:  4.620083, OS: Process 2 run operation start
+Time:  4.630372, OS: Process 2 run cycle complete
+Time:  4.639399, OS: Process 2 set in READY state
+Time:  4.651132, OS: Process 2 selected with 604 ms remaining
+Time:  4.665209, OS: Process 2 set in RUNNING state
+Time:  4.673461, OS: Process 2 run operation start
+Time:  4.683573, OS: Process 2 run cycle complete
+Time:  4.692295, OS: Process 2 set in READY state
+Time:  4.701924, OS: Process 2 selected with 598 ms remaining
+Time:  4.711982, OS: Process 2 set in RUNNING state
+Time:  4.720508, OS: Process 2 run operation start
+Time:  4.731177, OS: Process 2 run cycle complete
+Time:  4.739741, OS: Process 2 set in READY state
+Time:  4.748236, OS: Process 2 selected with 592 ms remaining
+Time:  4.755237, OS: Process 2 set in RUNNING state
+Time:  4.763293, OS: Process 2 run operation start
+Time:  4.774974, OS: Process 2 run cycle complete
+Time:  4.782003, OS: Process 2 set in READY state
+Time:  4.793597, OS: Process 2 selected with 586 ms remaining
+Time:  4.800774, OS: Process 2 set in RUNNING state
+Time:  4.810090, OS: Process 2 run operation start
+Time:  4.825990, OS: Process 2 run cycle complete
+Time:  4.836789, OS: Process 2 set in READY state
+Time:  4.848684, OS: Process 2 selected with 580 ms remaining
+Time:  4.858345, OS: Process 2 set in RUNNING state
+Time:  4.866959, OS: Process 2 run operation start
+Time:  4.877571, OS: Process 2 run cycle complete
+Time:  4.885405, OS: Process 2 set in READY state
+Time:  4.893987, OS: Process 2 selected with 574 ms remaining
+Time:  4.904432, OS: Process 2 set in RUNNING state
+Time:  4.914232, OS: Process 2 run operation start
+Time:  4.926163, OS: Process 2 run cycle complete
+Time:  4.940057, OS: Process 2 set in READY state
+Time:  4.945356, OS: Process 2 selected with 568 ms remaining
+Time:  4.955363, OS: Process 2 set in RUNNING state
+Time:  4.966899, OS: Process 2 run operation start
+Time:  4.979345, OS: Process 2 run cycle complete
+Time:  4.987325, OS: Process 2 set in READY state
+Time:  4.997319, OS: Process 2 selected with 562 ms remaining
+Time:  5.005573, OS: Process 2 set in RUNNING state
+Time:  5.014470, OS: Process 2 run operation start
+Time:  5.025423, OS: Process 2 run cycle complete
+Time:  5.038310, OS: Process 2 set in READY state
+Time:  5.045582, OS: Process 2 selected with 556 ms remaining
+Time:  5.055321, OS: Process 2 set in RUNNING state
+Time:  5.062051, OS: Process 2 run operation start
+Time:  5.073534, OS: Process 2 run cycle complete
+Time:  5.085134, OS: Process 2 set in READY state
+Time:  5.094904, OS: Process 2 selected with 550 ms remaining
+Time:  5.105449, OS: Process 2 set in RUNNING state
+Time:  5.112614, OS: Process 2 run operation start
+Time:  5.124883, OS: Process 2 run cycle complete
+Time:  5.131634, OS: Process 2 set in READY state
+Time:  5.139647, OS: Process 2 selected with 544 ms remaining
+Time:  5.148580, OS: Process 2 set in RUNNING state
+Time:  5.154617, OS: Process 2 run operation start
+Time:  5.166299, OS: Process 2 run operation end
+Time:  5.177330, OS: Process 2 set in READY state
+Time:  5.189431, OS: Process 2 selected with 540 ms remaining
+Time:  5.199175, OS: Process 2 set in RUNNING state
+Time:  5.208957, OS: Process 2 printer output start
+Time:  5.217296, OS: Process 2 set in BLOCKED state
+Time:  5.224758, OS: Process 0 selected with 1808 ms remaining
+Time:  5.231877, OS: Process 0 set in RUNNING state
+Time:  5.240201, OS: Process 0 run operation start
+Time:  5.251429, OS: Process 0 run operation end
+Time:  5.261114, OS: Process 0 set in READY state
+Time:  5.269642, OS: Process 0 selected with 1804 ms remaining
+Time:  5.277116, OS: Process 0 set in RUNNING state
+Time:  5.285525, OS: Process 0 printer output start
+Time:  5.299810, OS: Process 0 set in BLOCKED state
+Time:  5.307811, OS: System Idle
+#
+#
+#
+#
+Time:  5.354812, OS: Interrupt by Process 2
+#
+#
+#
+#
+#Time:  5.362954, OS: Process 2 printer IO end
+Time:  5.369817, OS: Process 2 set in READY state
+Time:  5.376872, OS: Process 2 selected with 410 ms remaining
+Time:  5.384575, OS: Process 2 set in RUNNING state
+Time:  5.391473, OS: Process 2 harddrive input start
+Time:  5.400592, OS: Process 2 set in BLOCKED state
+Time:  5.412028, OS: System Idle
+#
+#
+#
+#
+Time:  5.462105, OS: Interrupt by Process 2
+#
+#
+#
+#
+#Time:  5.471765, OS: Process 2 harddrive IO end
+Time:  5.481226, OS: Process 2 set in READY state
+Time:  5.491298, OS: Process 2 selected with 360 ms remaining
+Time:  5.499886, OS: Process 2 set in RUNNING state
+Time:  5.511587, OS: Process 2 keyboard input start
+Time:  5.525819, OS: Process 2 set in BLOCKED state
+Time:  5.535167, OS: System Idle
+#
+#
+#
+#
+Time:  5.655831, OS: Interrupt by Process 0
+#
+#
+#
+#
+#Time:  5.670864, OS: Process 0 printer IO end
+Time:  5.682681, OS: Process 0 set in READY state
+Time:  5.692760, OS: Process 0 selected with 1456 ms remaining
+Time:  5.704197, OS: Process 0 set in RUNNING state
+Time:  5.711913, OS: Process 0 printer output start
+Time:  5.719598, OS: Process 0 set in BLOCKED state
+Time:  5.729347, OS: System Idle
+#
+#
+#
+#
+Time:  5.895222, OS: Interrupt by Process 2
+#
+#
+#
+#
+#Time:  5.903331, OS: Process 2 keyboard IO end
+Time:  5.912468, OS: Process 2 set in EXIT state
+#
+#
+#
+#
+Time:  6.053396, OS: Interrupt by Process 0
+#
+#
+#
+#
+#Time:  6.060082, OS: Process 0 printer IO end
+Time:  6.066442, OS: Process 0 set in READY state
+Time:  6.066442, OS: Process 0 selected with 1132 ms remaining
+Time:  6.081129, OS: Process 0 set in RUNNING state
+Time:  6.088465, OS: Process 0 printer output start
+Time:  6.101802, OS: Process 0 set in BLOCKED state
+Time:  6.109578, OS: System Idle
+#
+#
+#
+#
+Time:  6.251633, OS: Interrupt by Process 0
+#
+#
+#
+#
+#Time:  6.259138, OS: Process 0 printer IO end
+Time:  6.269960, OS: Process 0 set in READY state
+Time:  6.279607, OS: Process 0 selected with 990 ms remaining
+Time:  6.287071, OS: Process 0 set in RUNNING state
+Time:  6.296196, OS: Process 0 run operation start
+Time:  6.305855, OS: Process 0 run cycle complete
+Time:  6.311460, OS: Process 0 set in READY state
+Time:  6.322292, OS: Process 0 selected with 984 ms remaining
+Time:  6.329514, OS: Process 0 set in RUNNING state
+Time:  6.336536, OS: Process 0 run operation start
+Time:  6.346550, OS: Process 0 run cycle complete
+Time:  6.353094, OS: Process 0 set in READY state
+Time:  6.362407, OS: Process 0 selected with 978 ms remaining
+Time:  6.371165, OS: Process 0 set in RUNNING state
+Time:  6.378586, OS: Process 0 run operation start
+Time:  6.389890, OS: Process 0 run cycle complete
+Time:  6.396657, OS: Process 0 set in READY state
+Time:  6.404883, OS: Process 0 selected with 972 ms remaining
+Time:  6.412447, OS: Process 0 set in RUNNING state
+Time:  6.422687, OS: Process 0 run operation start
+Time:  6.432565, OS: Process 0 run cycle complete
+Time:  6.439555, OS: Process 0 set in READY state
+Time:  6.446542, OS: Process 0 selected with 966 ms remaining
+Time:  6.453758, OS: Process 0 set in RUNNING state
+Time:  6.462375, OS: Process 0 run operation start
+Time:  6.474931, OS: Process 0 run cycle complete
+Time:  6.482852, OS: Process 0 set in READY state
+Time:  6.490107, OS: Process 0 selected with 960 ms remaining
+Time:  6.498644, OS: Process 0 set in RUNNING state
+Time:  6.507326, OS: Process 0 run operation start
+Time:  6.518414, OS: Process 0 run cycle complete
+Time:  6.526002, OS: Process 0 set in READY state
+Time:  6.534181, OS: Process 0 selected with 954 ms remaining
+Time:  6.540276, OS: Process 0 set in RUNNING state
+Time:  6.548767, OS: Process 0 run operation start
+Time:  6.559878, OS: Process 0 run operation end
+Time:  6.569225, OS: Process 0 set in READY state
+Time:  6.578238, OS: Process 0 selected with 950 ms remaining
+Time:  6.586397, OS: Process 0 set in RUNNING state
+Time:  6.594110, OS: Process 0 keyboard input start
+Time:  6.600681, OS: Process 0 set in BLOCKED state
+Time:  6.607186, OS: System Idle
+#
+#
+#
+#
+Time:  6.943243, OS: Interrupt by Process 0
+#
+#
+#
+#
+#Time:  6.951566, OS: Process 0 keyboard IO end
+Time:  6.960824, OS: Process 0 set in READY state
+Time:  6.969739, OS: Process 0 selected with 614 ms remaining
+Time:  6.978305, OS: Process 0 set in RUNNING state
+Time:  6.986509, OS: Process 0 keyboard input start
+Time:  6.993622, OS: Process 0 set in BLOCKED state
+Time:  7.003925, OS: System Idle
+#
+#
+#
+#
+Time:  7.075983, OS: Interrupt by Process 0
+#
+#
+#
+#
+#Time:  7.085903, OS: Process 0 keyboard IO end
+Time:  7.093580, OS: Process 0 set in READY state
+Time:  7.103315, OS: Process 0 selected with 542 ms remaining
+Time:  7.110936, OS: Process 0 set in RUNNING state
+Time:  7.119110, OS: Process 0 printer output start
+Time:  7.127359, OS: Process 0 set in BLOCKED state
+Time:  7.135687, OS: System Idle
+#
+#
+#
+#
+Time:  7.229745, OS: Interrupt by Process 0
+#
+#
+#
+#
+#Time:  7.241372, OS: Process 0 printer IO end
+Time:  7.253954, OS: Process 0 set in READY state
+Time:  7.262921, OS: Process 0 selected with 448 ms remaining
+Time:  7.274581, OS: Process 0 set in RUNNING state
+Time:  7.282275, OS: Process 0 run operation start
+Time:  7.291769, OS: Process 0 run cycle complete
+Time:  7.300731, OS: Process 0 set in READY state
+Time:  7.312602, OS: Process 0 selected with 442 ms remaining
+Time:  7.324364, OS: Process 0 set in RUNNING state
+Time:  7.332675, OS: Process 0 run operation start
+Time:  7.344950, OS: Process 0 run cycle complete
+Time:  7.354095, OS: Process 0 set in READY state
+Time:  7.361044, OS: Process 0 selected with 436 ms remaining
+Time:  7.369503, OS: Process 0 set in RUNNING state
+Time:  7.379406, OS: Process 0 run operation start
+Time:  7.392119, OS: Process 0 run cycle complete
+Time:  7.405754, OS: Process 0 set in READY state
+Time:  7.418627, OS: Process 0 selected with 430 ms remaining
+Time:  7.433390, OS: Process 0 set in RUNNING state
+Time:  7.448958, OS: Process 0 run operation start
+Time:  7.465552, OS: Process 0 run cycle complete
+Time:  7.475569, OS: Process 0 set in READY state
+Time:  7.487962, OS: Process 0 selected with 424 ms remaining
+Time:  7.498438, OS: Process 0 set in RUNNING state
+Time:  7.510500, OS: Process 0 run operation start
+Time:  7.529398, OS: Process 0 run cycle complete
+Time:  7.539287, OS: Process 0 set in READY state
+Time:  7.551484, OS: Process 0 selected with 418 ms remaining
+Time:  7.558416, OS: Process 0 set in RUNNING state
+Time:  7.565743, OS: Process 0 run operation start
+Time:  7.576613, OS: Process 0 run cycle complete
+Time:  7.583023, OS: Process 0 set in READY state
+Time:  7.594633, OS: Process 0 selected with 412 ms remaining
+Time:  7.609781, OS: Process 0 set in RUNNING state
+Time:  7.623889, OS: Process 0 run operation start
+Time:  7.681285, OS: Process 0 run cycle complete
+Time:  7.691189, OS: Process 0 set in READY state
+Time:  7.702146, OS: Process 0 selected with 406 ms remaining
+Time:  7.713356, OS: Process 0 set in RUNNING state
+Time:  7.724397, OS: Process 0 run operation start
+Time:  7.736307, OS: Process 0 run cycle complete
+Time:  7.742551, OS: Process 0 set in READY state
+Time:  7.749211, OS: Process 0 selected with 400 ms remaining
+Time:  7.754147, OS: Process 0 set in RUNNING state
+Time:  7.764665, OS: Process 0 run operation start
+Time:  7.778147, OS: Process 0 run cycle complete
+Time:  7.789397, OS: Process 0 set in READY state
+Time:  7.804217, OS: Process 0 selected with 394 ms remaining
+Time:  7.812215, OS: Process 0 set in RUNNING state
+Time:  7.824231, OS: Process 0 run operation start
+Time:  7.835779, OS: Process 0 run cycle complete
+Time:  7.844619, OS: Process 0 set in READY state
+Time:  7.851787, OS: Process 0 selected with 388 ms remaining
+Time:  7.859849, OS: Process 0 set in RUNNING state
+Time:  7.869961, OS: Process 0 run operation start
+Time:  7.884553, OS: Process 0 run cycle complete
+Time:  7.896075, OS: Process 0 set in READY state
+Time:  7.906476, OS: Process 0 selected with 382 ms remaining
+Time:  7.913583, OS: Process 0 set in RUNNING state
+Time:  7.921499, OS: Process 0 run operation start
+Time:  7.934423, OS: Process 0 run cycle complete
+Time:  7.944989, OS: Process 0 set in READY state
+Time:  7.951447, OS: Process 0 selected with 376 ms remaining
+Time:  7.960144, OS: Process 0 set in RUNNING state
+Time:  7.968482, OS: Process 0 run operation start
+Time:  7.979328, OS: Process 0 run cycle complete
+Time:  7.986801, OS: Process 0 set in READY state
+Time:  7.995358, OS: Process 0 selected with 370 ms remaining
+Time:  8.002906, OS: Process 0 set in RUNNING state
+Time:  8.009633, OS: Process 0 run operation start
+Time:  8.020797, OS: Process 0 run cycle complete
+Time:  8.028892, OS: Process 0 set in READY state
+Time:  8.034849, OS: Process 0 selected with 364 ms remaining
+Time:  8.040996, OS: Process 0 set in RUNNING state
+Time:  8.051556, OS: Process 0 run operation start
+Time:  8.064481, OS: Process 0 run cycle complete
+Time:  8.073359, OS: Process 0 set in READY state
+Time:  8.085707, OS: Process 0 selected with 358 ms remaining
+Time:  8.095092, OS: Process 0 set in RUNNING state
+Time:  8.102971, OS: Process 0 run operation start
+Time:  8.116752, OS: Process 0 run cycle complete
+Time:  8.123981, OS: Process 0 set in READY state
+Time:  8.132516, OS: Process 0 selected with 352 ms remaining
+Time:  8.141907, OS: Process 0 set in RUNNING state
+Time:  8.147955, OS: Process 0 run operation start
+Time:  8.157809, OS: Process 0 run cycle complete
+Time:  8.166115, OS: Process 0 set in READY state
+Time:  8.172696, OS: Process 0 selected with 346 ms remaining
+Time:  8.183612, OS: Process 0 set in RUNNING state
+Time:  8.190450, OS: Process 0 run operation start
+Time:  8.206485, OS: Process 0 run cycle complete
+Time:  8.213143, OS: Process 0 set in READY state
+Time:  8.223551, OS: Process 0 selected with 340 ms remaining
+Time:  8.233193, OS: Process 0 set in RUNNING state
+Time:  8.244179, OS: Process 0 run operation start
+Time:  8.257596, OS: Process 0 run cycle complete
+Time:  8.268915, OS: Process 0 set in READY state
+Time:  8.275840, OS: Process 0 selected with 334 ms remaining
+Time:  8.283178, OS: Process 0 set in RUNNING state
+Time:  8.293213, OS: Process 0 run operation start
+Time:  8.305747, OS: Process 0 run cycle complete
+Time:  8.311680, OS: Process 0 set in READY state
+Time:  8.317015, OS: Process 0 selected with 328 ms remaining
+Time:  8.325432, OS: Process 0 set in RUNNING state
+Time:  8.337246, OS: Process 0 run operation start
+Time:  8.347441, OS: Process 0 run cycle complete
+Time:  8.356287, OS: Process 0 set in READY state
+Time:  8.367345, OS: Process 0 selected with 322 ms remaining
+Time:  8.375108, OS: Process 0 set in RUNNING state
+Time:  8.383829, OS: Process 0 run operation start
+Time:  8.396579, OS: Process 0 run cycle complete
+Time:  8.403944, OS: Process 0 set in READY state
+Time:  8.411120, OS: Process 0 selected with 316 ms remaining
+Time:  8.419305, OS: Process 0 set in RUNNING state
+Time:  8.427805, OS: Process 0 run operation start
+Time:  8.442858, OS: Process 0 run cycle complete
+Time:  8.449231, OS: Process 0 set in READY state
+Time:  8.459538, OS: Process 0 selected with 310 ms remaining
+Time:  8.468541, OS: Process 0 set in RUNNING state
+Time:  8.478044, OS: Process 0 run operation start
+Time:  8.492851, OS: Process 0 run cycle complete
+Time:  8.499249, OS: Process 0 set in READY state
+Time:  8.508257, OS: Process 0 selected with 304 ms remaining
+Time:  8.516198, OS: Process 0 set in RUNNING state
+Time:  8.523645, OS: Process 0 run operation start
+Time:  8.537058, OS: Process 0 run operation end
+Time:  8.545177, OS: Process 0 set in READY state
+Time:  8.553100, OS: Process 0 selected with 298 ms remaining
+Time:  8.560803, OS: Process 0 set in RUNNING state
+Time:  8.570311, OS: Process 0 printer output start
+Time:  8.577751, OS: Process 0 set in BLOCKED state
+Time:  8.585559, OS: System Idle
+#
+#
+#
+#
+Time:  8.695612, OS: Interrupt by Process 0
+#
+#
+#
+#
+#Time:  8.704114, OS: Process 0 printer IO end
+Time:  8.709942, OS: Process 0 set in READY state
+Time:  8.720416, OS: Process 0 selected with 188 ms remaining
+Time:  8.731121, OS: Process 0 set in RUNNING state
+Time:  8.739122, OS: Process 0 printer output start
+Time:  8.746515, OS: Process 0 set in BLOCKED state
+Time:  8.755488, OS: System Idle
+#
+#
+#
+#
+Time:  8.943549, OS: Interrupt by Process 0
+#
+#
+#
+#
+#Time:  8.956394, OS: Process 0 printer IO end
+Time:  8.963568, OS: Process 0 set in EXIT state
+Time:  8.971014, OS: System Idle
