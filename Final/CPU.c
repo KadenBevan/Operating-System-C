@@ -6,19 +6,33 @@ int run(Process *process_list, Config *config_data)
 	
 	Process *next_process = NULL;
 	update_pcb_time(process_list, config_data);
-	next_process = get_next_process(process_list, config_data);
 	
-	if(next_process == NULL)
+	next_process = get_next_process(process_list, config_data);
+	int done = all_exit(process_list);
+	
+	if(next_process == NULL || done == 1)
 	{
-		// tell the output handler what process we are selecting
 		accessTimer(1, timestr);
 		sprintf(output_buffer, "Time: %9s, OS: System Idle\n", timestr);
 		handle_output(config_data, output_buffer);
-		while(next_process == NULL)
+		// This is a kind of a busy wait.
+		while(next_process == NULL || done == 1)
 		{
+			if(done == 1)
+			{
+				accessTimer(1, timestr);
+				sprintf(output_buffer, "Time: %9s, OS: System Idle\n", timestr);
+				handle_output(config_data, output_buffer);
+				while(done == 1)
+				{
+					done = all_exit(process_list);
+				}
+			}
+			done = all_exit(process_list);
 			next_process = get_next_process(process_list, config_data);
 		}
 	}
+	
 	// tell the output handler what process we are selecting
 	accessTimer(1, timestr);
 	sprintf(output_buffer, "Time: %9s, OS: Process %d selected with %d ms remaining\n", timestr, next_process->PID, next_process->total_cycle);
@@ -79,9 +93,9 @@ int run_p(Process *current_process, MetaData *current_operation, Config* config_
 		sprintf(output_buffer, "Time: %9s, OS: Process %i run operation start\n", timestr, current_process->PID);
 		handle_output(config_data, output_buffer);
 		
-		runTimer(config_data->qTime);
+		runTimer(config_data->q_time);
 		
-		sub_cycle(current_operation, config_data->qTime);
+		sub_cycle(current_operation, config_data->q_time);
 		
 		if(current_operation->cycle_time <= 0)
 		{

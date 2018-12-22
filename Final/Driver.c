@@ -60,7 +60,7 @@ int main(int argc, char *argv[])
 	char *meta_path;
 	
 	// assign the path to the pointer.
-	meta_path = config_data.metaFilePath;	
+	meta_path = config_data.metadata_path;	
 	
 	// malloc some room for the metadata linked list
 	MetaData *meta_head = malloc(sizeof(MetaData));
@@ -96,14 +96,13 @@ int main(int argc, char *argv[])
 	// Set all the processes to the ready state
 	ready_all(process);
 	
-	// and output that we did so
 	accessTimer(1, timestr);
 	sprintf(output_buffer, "Time: %9s, OS: All processes now set in Ready state\n", timestr);
 	handle_output(&config_data, output_buffer);
 	
-	//pthread_mutex_init(&PCB_MUTEX, NULL);
-	//pthread_mutex_init(&INTERRUPT_MUTEX, NULL);
-	//PCB_MUTEX = PTHREAD_MUTEX_INITIALIZER;
+	accessTimer(1, timestr);
+	sprintf(output_buffer, "Time: %9s, OS: Discovered scheduling type: %s\n", timestr, config_data.schedule_code);
+	handle_output(&config_data, output_buffer);
 	
 	init_interrupt_watcher(&config_data);
 	

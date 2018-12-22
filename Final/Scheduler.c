@@ -1,6 +1,25 @@
 #include "Scheduler.h"
 #include "Driver.h"
 
+
+// returns 1 if all processes are in EXIT state otherwise 0;
+int all_exit(Process *process_list)
+{
+	pthread_mutex_lock(&PCB_MUTEX);
+	Process *p_process_list = process_list;
+	while(p_process_list->next != NULL)
+	{
+		if(p_process_list->state != EXIT)
+		{
+			pthread_mutex_unlock(&PCB_MUTEX);
+			return 0;
+		}
+		p_process_list = p_process_list->next;
+	}
+	pthread_mutex_unlock(&PCB_MUTEX);
+	return 1;
+}
+
 // Function: ready_all is called from the Driver.c
 // pretty much used to ready all the processes 
 int ready_all(Process *process_list)
@@ -169,8 +188,8 @@ int total_cycle_time(Process *process, int IOCT, int PCT)
 
 Process *get_next_process(Process *process_list, Config* config_data)
 {
-	if(strncmp(config_data->scheduleCode, "FCFS-N", 5) == 0 
-	|| strncmp(config_data->scheduleCode, "NONE", 5) == 0)
+	if(strncmp(config_data->schedule_code, "FCFS-N", 5) == 0 
+	|| strncmp(config_data->schedule_code, "NONE", 5) == 0)
 	{
 		Process *process_itr = process_list;
 		while(process_itr->next != NULL)
@@ -183,7 +202,7 @@ Process *get_next_process(Process *process_list, Config* config_data)
 		}
 		return NULL;
 	}
-	else if(strncmp(config_data->scheduleCode, "SJF-N", 5) == 0)
+	else if(strncmp(config_data->schedule_code, "SJF-N", 5) == 0)
 	{
 		int max_int = 2147483647;
 		int shortest_pid = -1;
@@ -219,7 +238,7 @@ Process *get_next_process(Process *process_list, Config* config_data)
 		}
 		return NULL;
 	}
-	else if(strncmp(config_data->scheduleCode, "SRTF-P", 5) == 0)
+	else if(strncmp(config_data->schedule_code, "SRTF-P", 5) == 0)
 	{
 		// get the new times of the processes
 		int max_int = 2147483647;
@@ -256,7 +275,7 @@ Process *get_next_process(Process *process_list, Config* config_data)
 		}
 		return NULL;
 	}
-	else if(strncmp(config_data->scheduleCode, "FCFS-P", 5) == 0)
+	else if(strncmp(config_data->schedule_code, "FCFS-P", 5) == 0)
 	{
 		Process *process_itr = process_list;
 		while(process_itr->next != NULL)

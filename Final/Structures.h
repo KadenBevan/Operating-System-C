@@ -12,14 +12,14 @@
 typedef struct Config
 {
 	int version;
-	int qTime;
-	int availableMem;
+	int q_time;
+	int available_memory;
 	int PCT;
 	int IOCT;
-	char logFilePath[MAX_STRING];
-	char logTo[MAX_STRING];
-	char scheduleCode[MAX_STRING];
-	char metaFilePath[MAX_STRING];
+	char log_path[MAX_STRING];
+	char log_destination[MAX_STRING];
+	char schedule_code[MAX_STRING];
+	char metadata_path[MAX_STRING];
 
 } Config;
 
@@ -42,8 +42,6 @@ typedef struct Process
 // but this list is attached to a PCB or process.
 typedef struct MetaData
 {
-	pthread_mutex_t lock;
-	
 	int cycle_time;
 	char command;
 	char* operation;
@@ -55,7 +53,6 @@ typedef struct MetaData
 
 typedef struct IOThreadData
 {
-	struct Locks *locks;
 	int run_time;
 	struct Process *process;
 } IOThreadData;

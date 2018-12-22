@@ -61,6 +61,6 @@ int access_memory(int segment, int base, int allocate)
 
 int init_mmu(Config *config)
 {
-	max_memory = config->availableMem;
+	max_memory = config->available_memory;
 	return 0;
 }

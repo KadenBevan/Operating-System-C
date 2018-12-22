@@ -8,16 +8,16 @@ static void output_file(Config *config, char line[]);
 // pretty basic
 void handle_output(Config *config, char line[])
 {
-	if (str_n_cmp(config->logTo, "Both", 3) == 0)
+	if (str_n_cmp(config->log_destination, "Both", 3) == 0)
 	{
 		output_file(config, line);
 		output_monitor(config, line);
 	}
-	else if (str_n_cmp(config->logTo, "Monitor", 3) == 0)
+	else if (str_n_cmp(config->log_destination, "Monitor", 3) == 0)
 	{
 		output_monitor(config, line);
 	}
-	else if (str_n_cmp(config->logTo, "File", 3) == 0)
+	else if (str_n_cmp(config->log_destination, "File", 3) == 0)
 	{
 		output_file(config, line);
 	}
@@ -34,7 +34,7 @@ void output_monitor(Config *config, char line[])
 void output_file(Config *config, char line[])
 {
 	FILE* logfile;
-	if ((logfile = fopen(config->logFilePath, "a")) == NULL)
+	if ((logfile = fopen(config->log_path, "a")) == NULL)
 	{
 		return;
 	}

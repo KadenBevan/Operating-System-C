@@ -22,21 +22,21 @@ int parse_config(char *filename, Config *config_data)
 		{
 			char temp_file[MEDIUM_STRING];
 			sscanf(line, "File Path: %s", temp_file);
-			strcpy(config_data->metaFilePath, temp_file);
+			strcpy(config_data->metadata_path, temp_file);
 		}
 		if (strncmp(line, "CPU Scheduling Code:", 15) == 0)
 		{
 			char temp_code[MEDIUM_STRING];
 			sscanf(line, "CPU Scheduling Code: %s", temp_code);
-			strcpy(config_data->scheduleCode, temp_code);
+			strcpy(config_data->schedule_code, temp_code);
 		}
 		if (strncmp(line, "Quantum Time (cycles):", 18) == 0)
 		{
-			sscanf(line, "Quantum Time (cycles): %d", &config_data->qTime);
+			sscanf(line, "Quantum Time (cycles): %d", &config_data->q_time);
 		}
 		if (strncmp(line, "Memory Available (KB):", 18) == 0)
 		{
-			sscanf(line, "Memory Available (KB): %d", &config_data->availableMem);
+			sscanf(line, "Memory Available (KB): %d", &config_data->available_memory);
 		}
 		if (strncmp(line, "Processor Cycle Time (msec):", 20) == 0)
 		{
@@ -48,15 +48,15 @@ int parse_config(char *filename, Config *config_data)
 		}
 		if (strncmp(line, "Log To:", 5) == 0)
 		{
-			char temp_logto[MEDIUM_STRING];
-			sscanf(line, "Log To: %s", temp_logto);
-			strcpy(config_data->logTo, temp_logto);
+			char temp_log_destination[MEDIUM_STRING];
+			sscanf(line, "Log To: %s", temp_log_destination);
+			strcpy(config_data->log_destination, temp_log_destination);
 		}
 		if (strncmp(line, "Log File Path:", 10) == 0)
 		{
 			char temp_logpath[MEDIUM_STRING];
 			sscanf(line, "Log File Path: %s", temp_logpath);
-			strcpy(config_data->logFilePath, temp_logpath);
+			strcpy(config_data->log_path, temp_logpath);
 		}
 	}
 	fclose(ptr_file);
@@ -70,11 +70,11 @@ int is_config(Config *config_data)
 	{
 		error++;
 	}
-	else if (config_data->qTime < 0 || config_data->qTime > 100)
+	else if (config_data->q_time < 0 || config_data->q_time > 100)
 	{
 		error++;
 	}
-	else if (config_data->availableMem < 0 || config_data->availableMem > 1048576)
+	else if (config_data->available_memory < 0 || config_data->available_memory > 1048576)
 	{
 		error++;
 	}
@@ -86,19 +86,19 @@ int is_config(Config *config_data)
 	{
 		error++;
 	}
-	else if (config_data->metaFilePath == NULL)
+	else if (config_data->metadata_path == NULL)
 	{
 		error++;
 	}
-	else if (config_data->logFilePath == NULL)
+	else if (config_data->log_path == NULL)
 	{
 		error++;
 	}
-	else if (config_data->logTo == NULL)
+	else if (config_data->log_destination == NULL)
 	{
 		error++;
 	}
-	else if (config_data->scheduleCode == NULL)
+	else if (config_data->schedule_code == NULL)
 	{
 		error++;
 	}
