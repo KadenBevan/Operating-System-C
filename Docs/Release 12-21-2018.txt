@@ -1,0 +1,19 @@
+
+
+
+Thread Main:                        | Thread Interrupt_Watcher:         		| Thread IOThread:
+  init interrupt watcher            |                                   		|
+  run():                            |	check interrupt                 		| 	run timer
+	get next process --busy wait--  |	while interrupt == NULL: --busy wait--	|	flag interrupt
+	set process in running state    |		check interrupt             		|	exit
+	if IO:                          |	set reset interrupt --critical--		|
+		set state to blocked        |	set interrupter to READY        		|
+	    spawn IOThread              |	output which operation ended    		|
+	if run:                         |   start interrupt watcher         		|
+		run a qtime (cycle)         |                                   		|
+		set state to ready          |                                   		|
+	run()                           |                                   		|
+			
+critical data:
+	PCB data
+	interrupt

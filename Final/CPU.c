@@ -23,6 +23,8 @@ int run(Process *process_list, Config *config_data)
 				accessTimer(1, timestr);
 				sprintf(output_buffer, "Time: %9s, OS: System Idle\n", timestr);
 				handle_output(config_data, output_buffer);
+				
+				clean_up(process_list);
 				while(done == 1)
 				{
 					done = all_exit(process_list);

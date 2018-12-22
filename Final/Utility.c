@@ -83,17 +83,26 @@ int a_to_i(char* str)
 
 int clean_up(Process *process_list)
 {
-	//MetaData *p_meta = process_list->operation_list;
-	//MetaData *temp = NULL;
-	//while(p_meta!= NULL)
-	//{
-	//	if(p_meta->finished == 1)
-	//	{
-	//		MetaData *temp = p_meta;
-	//		p_meta = p_meta->next;
-	//		//free(temp);
-	//	}
-	//	p_meta = p_meta->next;
-	//}
+	Process *p_process = NULL;
+	MetaData *p_meta = NULL;
+	MetaData *temp = NULL;
+	
+	p_process = process_list;
+	while(p_process->next != NULL)
+	{
+		p_meta = process_list->operation_list;
+		temp = NULL;
+		while(p_meta != NULL)
+		{
+			if(p_meta->finished == 1)
+			{
+				MetaData *temp = p_meta;
+				p_meta = p_meta->next;
+				free(temp);
+			}
+			p_meta = p_meta->next;
+		}
+		p_process = p_process->next;
+	}
 	return 0;
 }
